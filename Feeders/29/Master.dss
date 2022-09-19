@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------//
+// Autor: Paulo Radatz
+// e-mail: paulo.radatz@gmail.com
+// -----------------------------------------------------------------------//
+
+ClearAll
+
+New Circuit.Thevenin bus1=SourceBus pu=1.0 basekv=13.8
+~ Z0=[0.000000001, 0.000000001] Z1=[0.000000001, 0.000000001]
+
+New Wiredata.CondutorFase GMR=0.0244 DIAM=0.721 RAC=0.306
+~ normamps=530
+~ Runits=mi RADunits=in GMRunits=ft
+
+New Wiredata.CondutorNeutro GMR=0.00814 DIAM=0.563 RAC=0.592
+~ normamps=340
+~ Runits=mi RADunits=in GMRunits=ft
+
+New Linegeometry.Poste nconds=4 nphases=3 reduce=No
+~ cond=1 wire=CondutorFase     x= -4     h=29   units=ft
+~ cond=2 wire=CondutorFase     x= -1.5   h=29   units=ft
+~ cond=3 wire=CondutorFase     x= 3      h=29   units=ft
+~ cond=4 wire=CondutorNeutro   x= 0      h=25   units=ft
+
+New Line.MinhaLinha bus1=SourceBus.1.2.3.0 bus2=B.1.2.3.4
+~ geometry=Poste
+~ length=1 units=km
+~ earthmodel=Carson
+
+New Load.load1A phases=1 bus1=B.1.4 kv=7.967 kw=1000 pf=0.92 model=1
+New Load.load1B phases=1 bus1=B.2.4 kv=7.967 kw=1000 pf=0.92 model=1
+New Load.load1C phases=1 bus1=B.3.4 kv=7.967 kw=1000 pf=0.92 model=1
+
+Set voltagebases=[13.8]
+Calcvoltagebases

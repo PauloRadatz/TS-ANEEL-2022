@@ -27,6 +27,10 @@ def do_energy_allocation(dss: py_dss_interface.DSSDLL, energy_mwh, error_mwh=1):
         dss.text("solve")
 
         delta_energy_mwh = calc_delta_energy(dss, energy_mwh)
+
+        if i == 0:
+            print(f"Original Model's Energy: {energy_mwh - delta_energy_mwh}")
+
         energy_factor = delta_energy_mwh / energy_mwh
 
         dss.meters_reset()
@@ -44,6 +48,5 @@ def calc_delta_energy(dss, energy_mwh):
     dss.meters_first()
     energy_mwh_power_flow = dss.meters_register_values()[0]
     delta_energy_mwh = energy_mwh - energy_mwh_power_flow
-
 
     return delta_energy_mwh
