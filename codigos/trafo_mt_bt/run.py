@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Time    : 9/22/2022 1:55 PM
+# @Time    : 9/23/2022 12:53 PM
 # @Author  : Paulo Radatz
 # @Email   : pradatz@epri.com
 # @File    : run.py
@@ -15,14 +15,14 @@ import itertools
 from analytics import do_energy_allocation
 
 script_path = os.path.dirname(os.path.abspath(__file__))
-dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("../../feeders", "Linha_BT", "caso1.dss"))
-dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("../../feeders", "Linha_BT", "caso2.dss"))
-dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("../../feeders", "Linha_BT", "caso3.dss"))
-dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("../../feeders", "Linha_BT", "caso4.dss"))
+dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("../../feeders", "Trafo_MT_BT", "caso1.dss"))
+dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("../../feeders", "Trafo_MT_BT", "caso2.dss"))
+dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("../../feeders", "Trafo_MT_BT", "caso3.dss"))
+# dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("../../feeders", "Trafo_MT_BT", "caso4.dss"))
 
 
-casos_list = ["Caso 1", "Caso 2", "Caso 3", "Caso 4"]
-casos_dss_list = [dss_file_caso_1, dss_file_caso_2, dss_file_caso_3, dss_file_caso_4]
+casos_list = ["Caso 1", "Caso 2", "Caso 3"]
+casos_dss_list = [dss_file_caso_1, dss_file_caso_2, dss_file_caso_3]
 carga_list = ["Equilibrada", "Desequilibrada"]
 
 carregamento_max = np.sqrt(3) * 0.22 * 140
