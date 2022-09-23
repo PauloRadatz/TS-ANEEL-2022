@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------//
+// Autor: Paulo Radatz
+// e-mail: paulo.radatz@gmail.com
+// -----------------------------------------------------------------------//
+
+ClearAll
+
+New Circuit.Thevenin bus1=SourceBus pu=1.05 basekv=13.8 model=ideal
+
+New Transformer.TrafoTri phases=3 windings=2 xhl=0.00000001 %loadloss=0.00000001 %noloadloss=0.00000001
+~ wdg=1 bus=SourceBus kV=13.8 kva=10000 conn=delta
+~ wdg=2 bus=A.1.2.3.4 kV=0.22 kva=10000 conn=wye
+
+New reactor.R phases=1 bus1=A.4 bus2=A.0 r=15 x=0
+
+// Condutor 4 AWG
+New Wiredata.4AWG
+~ GMR=0.00213 DIAM=0.588 RAC=1.551 normamps=140
+~ GMRunits=m RADunits=cm Runits=km
+
+// Estrutura da rede - S1 - 4 AWG
+New Linegeometry.S1_4AWG nconds=4 nphases=3 reduce=yes 
+~ cond=1 wire=4AWG X=0.2 h=7.0 units=m
+~ cond=2 wire=4AWG X=0.2 h=6.8 units=m
+~ cond=3 wire=4AWG X=0.2 h=6.6 units=m
+~ cond=4 wire=4AWG X=0.2 h=7.2 units=m
+
+New Line.L bus1=A.1.2.3 bus2=B.1.2.3 length=0.05 geometry=S1_4AWG units=km earthmodel=Carson
+
+
+New Load.LA_M1 phases=1 bus1=B.1.4 kv=0.127 kw=3 pf=0.92 model=2
+New Load.LB_M1 phases=1 bus1=B.2.4 kv=0.127 kw=3 pf=0.92 model=2
+New Load.LC_M1 phases=1 bus1=B.3.4 kv=0.127 kw=3 pf=0.92 model=2
+New Load.LA_M2 phases=1 bus1=B.1.4 kv=0.127 kw=3 pf=0.92 model=3
+New Load.LB_M2 phases=1 bus1=B.2.4 kv=0.127 kw=3 pf=0.92 model=3
+New Load.LC_M2 phases=1 bus1=B.3.4 kv=0.127 kw=3 pf=0.92 model=3
+
+Set voltagebases=[13.8 0.22]
+Calcvoltagebases
+
+New Energymeter.M element=Line.L terminal=1
+
+!solve
+
+!Solve
+
+!dump Line.L Debug 
+
+!Set earthmodel=Carson
+!Show LineConstants 60 km 100.0
