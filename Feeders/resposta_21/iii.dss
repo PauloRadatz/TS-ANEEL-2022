@@ -1,0 +1,14 @@
+ClearAll
+
+redirect modelo/fonte_ideal.dss
+redirect modelo/trafo_mt_bt_ideal.dss
+
+New Line.L bus1=A.1.2.3.4 bus2=B.1.2.3.4 length=1 units=km 
+~ r1=1.5518 x1=0.359412 c1=12.7838
+~ r0=2.13381 x0=1.82371 c0=4.79521
+
+New Isource.ia amps=140 phases=1 bus1=B.1.4 angle=-30
+New Isource.ib amps=140 phases=1 bus1=B.2.4 angle=-150
+New Isource.ic amps=140 phases=1 bus1=B.3.4 angle=90
+
+redirect modelo/medidor.dss

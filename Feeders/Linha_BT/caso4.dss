@@ -13,10 +13,10 @@ New Transformer.TrafoTri phases=3 windings=2 xhl=0.00000001 %loadloss=0.00000001
 
 New reactor.R phases=1 bus1=A.4 bus2=A.0 r=15 x=0
 
-New Line.L phases=4 bus1=A.1.2.3.4 bus2=B.1.2.3.4 length=0.05 R1=1.5518 X1=0.359412
-!~ R0=2.13381 R1=1.5518 !ohm/km
-!~ X0=1.82371 X1=0.359412   !ohm/km
-!~ C0=4.79521 C1=12.7838  !nF/km
+New Line.L phases=4 bus1=A.1.2.3.4 bus2=B.1.2.3.4 length=0.05
+~ R0=2.13381 R1=1.5518 !ohm/km
+~ X0=1.82371 X1=0.359412   !ohm/km
+~ C0=4.79521 C1=12.7838  !nF/km
 
 New Load.LA_M1 phases=1 bus1=B.1.4 kv=0.127 kw=3 pf=0.92 model=2
 New Load.LB_M1 phases=1 bus1=B.2.4 kv=0.127 kw=3 pf=0.92 model=2

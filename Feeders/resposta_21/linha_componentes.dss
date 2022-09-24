@@ -1,0 +1,10 @@
+ClearAll
+
+redirect modelo/fonte_ideal.dss
+redirect modelo/arranjo.dss
+
+edit Linegeometry.S1_4AWG reduce=Yes
+
+
+Set earthmodel=Carson
+Show LineConstants 60 km 100.0

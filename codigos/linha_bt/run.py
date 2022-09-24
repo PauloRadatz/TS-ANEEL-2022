@@ -19,10 +19,11 @@ dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("../../feeders", "Linha
 dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("../../feeders", "Linha_BT", "caso2.dss"))
 dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("../../feeders", "Linha_BT", "caso3.dss"))
 dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("../../feeders", "Linha_BT", "caso4.dss"))
+dss_file_caso_5 = str(pathlib.Path(script_path).joinpath("../../feeders", "Linha_BT", "caso5.dss"))
 
 
-casos_list = ["Caso 1", "Caso 2", "Caso 3", "Caso 4"]
-casos_dss_list = [dss_file_caso_1, dss_file_caso_2, dss_file_caso_3, dss_file_caso_4]
+casos_list = ["Caso 1", "Caso 2", "Caso 3", "Caso 4", "Caso 5"]
+casos_dss_list = [dss_file_caso_1, dss_file_caso_2, dss_file_caso_3, dss_file_caso_4, dss_file_caso_5]
 carga_list = ["Equilibrada", "Desequilibrada"]
 
 carregamento_max = np.sqrt(3) * 0.22 * 140
@@ -63,17 +64,24 @@ for caso, carga, carregamento_pu, carga_reator in list(itertools.product(*[casos
     dss.text("set mode=daily")
     dss.text("set number=1")
     dss.text("set stepsize=1h")
-    dss.text("set tolerance=0.001")
+    # dss.text("set tolerance=0.001")
 
+    dss.text("edit line.l length=0.1")
 
     fator = 1
     if carga == "Desequilibrada":
-        fator = 1/3
+        fator = 12/18
+        # fator = 1/3
 
-        dss.text("Edit Load.LB_M1 enabled=False")
-        dss.text("Edit Load.LC_M1 enabled=False")
-        dss.text("Edit Load.LB_M2 enabled=False")
-        dss.text("Edit Load.LC_M2 enabled=False")
+        # dss.text("Edit Load.LB_M1 enabled=False")
+        # dss.text("Edit Load.LC_M1 enabled=False")
+        # dss.text("Edit Load.LB_M2 enabled=False")
+        # dss.text("Edit Load.LC_M2 enabled=False")
+
+        dss.text("Edit Load.LB_M1 kw=2")
+        dss.text("Edit Load.LC_M1 kw=1")
+        dss.text("Edit Load.LB_M2 kw=2")
+        dss.text("Edit Load.LC_M2 kw=1")
 
         dss.lines_first()
         if not carga_reator and dss.lines_read_phases() == 3:

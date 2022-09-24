@@ -75,6 +75,11 @@ for caso, carga, carregamento_pu, carga_reator in list(itertools.product(*[casos
         dss.text("Edit Load.LB_M2 enabled=False")
         dss.text("Edit Load.LC_M2 enabled=False")
 
+        # dss.text("Edit Load.LB_M1 kw=0.05")
+        # dss.text("Edit Load.LC_M1 kw=0.05")
+        # dss.text("Edit Load.LB_M2 kw=0.05")
+        # dss.text("Edit Load.LC_M2 kw=0.05")
+
         dss.lines_first()
         if not carga_reator and dss.lines_read_phases() == 3:
             pass
