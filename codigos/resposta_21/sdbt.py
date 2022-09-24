@@ -68,10 +68,12 @@ for carga_equilibrada, caso, carregamento_pu in list(itertools.product(*[carga_e
     else:
         dss.isources_write_name("ia")
         dss.isources_write_amps(dss.isources_read_amps() * carregamento_pu)
-        dss.isources_write_name("ib")
-        dss.isources_write_amps(0)
-        dss.isources_write_name("ic")
-        dss.isources_write_amps(0)
+        # dss.isources_write_name("ib")
+        # dss.isources_write_amps(0)
+        # dss.isources_write_name("ic")
+        # dss.isources_write_amps(0)
+        dss.text("edit isource.ib enabled=NO")
+        dss.text("edit isource.ic enabled=NO")
 
     dss.text("solve")
 
@@ -99,8 +101,8 @@ dict_to_df["Caso"] = casos_resultado_list
 dict_to_df["Carga Equilibrada"] = carga_equilibrada_resultado_list
 dict_to_df["Perdas kWh / km"] = perdas_kwh_list
 dict_to_df["Corrente 1-a A"] = corrente_1_a_amps
-dict_to_df["Corrente 1-b A"] = corrente_1_a_amps
-dict_to_df["Corrente 1-c A"] = corrente_1_a_amps
+dict_to_df["Corrente 1-b A"] = corrente_1_b_amps
+dict_to_df["Corrente 1-c A"] = corrente_1_c_amps
 # dict_to_df["Corrente 2-a A"] = corrente_2_a_amps
 # dict_to_df["Corrente 2-b A"] = corrente_2_b_amps
 # dict_to_df["Corrente 2-c A"] = corrente_2_c_amps
