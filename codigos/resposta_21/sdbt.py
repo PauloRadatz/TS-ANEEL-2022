@@ -30,6 +30,7 @@ dss = py_dss_interface.DSSDLL("C:\Program Files\OpenDSS")
 casos_resultado_list = list()
 perdas_kwh_list = list()
 carga_equilibrada_resultado_list = list()
+carregamento_resultado_list = list()
 corrente_1_a_amps = list()
 corrente_1_b_amps = list()
 corrente_1_c_amps = list()
@@ -51,6 +52,7 @@ for carga_equilibrada, caso, carregamento_pu in list(itertools.product(*[carga_e
 
     casos_resultado_list.append(caso)
     carga_equilibrada_resultado_list.append(carga_equilibrada)
+    carregamento_resultado_list.append(carregamento_pu)
 
     dss.text(f"compile [{caso_dss}]")
     # dss.text("set mode=daily")
@@ -84,9 +86,9 @@ for carga_equilibrada, caso, carregamento_pu in list(itertools.product(*[carga_e
     # perdas_kwh_list.append(dss.meters_register_values()[12])
     perdas_kwh_list.append(dss.circuit_losses()[0] / 1000.0)
     dss.circuit_set_active_element("line.l")
-    corrente_1_a_amps.append(dss.cktelement_currents_mag_ang()[0])
-    corrente_1_b_amps.append(dss.cktelement_currents_mag_ang()[2])
-    corrente_1_c_amps.append(dss.cktelement_currents_mag_ang()[4])
+    # corrente_1_a_amps.append(dss.cktelement_currents_mag_ang()[0])
+    # corrente_1_b_amps.append(dss.cktelement_currents_mag_ang()[2])
+    # corrente_1_c_amps.append(dss.cktelement_currents_mag_ang()[4])
     # corrente_2_a_amps.append(dss.cktelement_currents_mag_ang()[8])
     # corrente_2_b_amps.append(dss.cktelement_currents_mag_ang()[10])
     # corrente_2_c_amps.append(dss.cktelement_currents_mag_ang()[12])
@@ -99,10 +101,10 @@ for carga_equilibrada, caso, carregamento_pu in list(itertools.product(*[carga_e
 dict_to_df = dict()
 dict_to_df["Caso"] = casos_resultado_list
 dict_to_df["Carga Equilibrada"] = carga_equilibrada_resultado_list
-dict_to_df["Perdas kWh / km"] = perdas_kwh_list
-dict_to_df["Corrente 1-a A"] = corrente_1_a_amps
-dict_to_df["Corrente 1-b A"] = corrente_1_b_amps
-dict_to_df["Corrente 1-c A"] = corrente_1_c_amps
+dict_to_df["Perdas kWh por km"] = perdas_kwh_list
+dict_to_df["Carregamento"] = carregamento_resultado_list
+# dict_to_df["Carregamento A"] = corrente_1_b_amps
+# dict_to_df["Carregamento A"] = corrente_1_c_amps
 # dict_to_df["Corrente 2-a A"] = corrente_2_a_amps
 # dict_to_df["Corrente 2-b A"] = corrente_2_b_amps
 # dict_to_df["Corrente 2-c A"] = corrente_2_c_amps
