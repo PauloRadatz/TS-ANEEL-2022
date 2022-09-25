@@ -1,0 +1,3 @@
+New Isource.ia amps=-140 phases=1 bus1=B.1 bus2=B.4 angle=-30
+New Isource.ib amps=-140 phases=1 bus1=B.2 bus2=B.4 angle=-150
+New Isource.ic amps=-140 phases=1 bus1=B.3 bus2=B.4 angle=90
