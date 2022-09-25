@@ -13,10 +13,10 @@ import pandas as pd
 import itertools
 
 script_path = os.path.dirname(os.path.abspath(__file__))
-dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "v.dss"))
-dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "i.dss"))
-dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "ii.dss"))
-dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "iii.dss"))
+dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDBT", "v.dss"))
+dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDBT", "i.dss"))
+dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDBT", "ii.dss"))
+dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDBT", "iii.dss"))
 
 
 
@@ -60,7 +60,9 @@ for carga_equilibrada, caso, carregamento_pu in list(itertools.product(*[carga_e
     # dss.text("set stepsize=1h")
     # dss.text("set tolerance=0.000001")
     # dss.text("set maxi=100")
-    # dss.text("edit line.l length=0.1")
+
+    # TODO opendss with a bug when linegeometry
+    # dss.text("edit line.l length=0.5")
 
     if carga_equilibrada:
         for i_source in ["ia", "ib", "ic"]:
@@ -94,7 +96,7 @@ for carga_equilibrada, caso, carregamento_pu in list(itertools.product(*[carga_e
     # corrente_2_c_amps.append(dss.cktelement_currents_mag_ang()[12])
 
     print(i)
-    dss.text(f"save circuit dir={i}")
+    # dss.text(f"save circuit dir={i}")
     i = i + 1
 
 
@@ -112,7 +114,7 @@ dict_to_df["Carregamento"] = carregamento_resultado_list
 
 df = pd.DataFrame.from_dict(dict_to_df)
 
-arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "resultados.csv"))
+arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDBT", "resultados.csv"))
 
 df.to_csv(arquivo_resultados)
 

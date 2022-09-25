@@ -55,7 +55,7 @@ def calcula_erro(df):
  df["Erro Percentual"] = erro_per
 
 script_path = os.path.dirname(os.path.abspath(__file__))
-arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../feeders", "resposta_21", "resultados.csv"))
+arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../feeders", "resposta_21", "SDBT", "resultados.csv"))
 
 
 completo_df = pd.read_csv(arquivo_resultados, index_col=0)
