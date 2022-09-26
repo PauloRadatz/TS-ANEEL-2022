@@ -5,6 +5,6 @@ redirect modelo/trafo_mt_bt_ideal.dss
 redirect modelo/arranjo.dss
 redirect modelo/carga_isource.dss
 
-New Line.L bus1=A.1.2.3.4 bus2=B.1.2.3.4 geometry=S1_4AWG earthmodel=Carson length=1 units=km 
+New Line.L bus1=A.1.2.3.4 bus2=B.1.2.3.4 geometry=S1_4AWG earthmodel=Carson length=0.1 units=km 
 
 redirect modelo/medidor.dss
