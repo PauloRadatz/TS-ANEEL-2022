@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# @Time    : 9/24/2022 12:28 PM
+# @Time    : 9/26/2022 3:02 PM
 # @Author  : Paulo Radatz
 # @Email   : pradatz@epri.com
-# @File    : sdbt.py
+# @File    : sdmt.py
 # @Software: PyCharm
 
 import os
@@ -12,12 +12,10 @@ import pandas as pd
 import itertools
 
 script_path = os.path.dirname(os.path.abspath(__file__))
-dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDBT", "v.dss"))
-dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDBT", "i.dss"))
-dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDBT", "ii.dss"))
-dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDBT", "iii.dss"))
-
-
+dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDMT", "v.dss"))
+dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDMT", "i.dss"))
+dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDMT", "ii.dss"))
+dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDMT", "iii.dss"))
 
 casos_list = ["v", "i", "ii", "iii"]
 casos_dss_list = [dss_file_caso_1, dss_file_caso_2, dss_file_caso_3, dss_file_caso_4]
@@ -86,8 +84,8 @@ dict_to_df["Carregamento"] = carregamento_resultado_list
 
 df = pd.DataFrame.from_dict(dict_to_df)
 
-arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDBT", "resultados.csv"))
+arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDMT", "resultados.csv"))
 
 df.to_csv(arquivo_resultados)
 
-print(df)
+print("here")

@@ -1,0 +1,9 @@
+ClearAll
+
+redirect modelo/fonte_ideal.dss
+redirect modelo/carga_isource.dss
+
+New Line.L phases=3 bus1=A.1.2.3 bus2=B.1.2.3 length=0.5 units=km 
+~ r1=0.195 x1=0.384432
+
+redirect modelo/medidor.dss

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# @Time    : 9/23/2022 11:07 AM
+# @Time    : 9/26/2022 3:41 PM
 # @Author  : Paulo Radatz
 # @Email   : pradatz@epri.com
-# @File    : dados_linhas.py
+# @File    : dados_trafo.py
 # @Software: PyCharm
 
 import os
@@ -46,23 +46,32 @@ mpl_dict = {'figure.facecolor': 'white',
 for key, value in mpl_dict.items():
     mpl.rcParams[key] = value
 
+def calcula_erro(df):
+ erro_per = list()
+ for index, row in df.iterrows():
+  atual = row["Perdas kWh"]
+  base = df[(df["Caso"] == "Caso 1") & (df["Carregamento"] == row["Carregamento"])]["Perdas kWh"].values[0]
+  erro_per.append((atual - base) * 100 / base)
+ df["Erro Percentual"] = erro_per
+
 script_path = os.path.dirname(os.path.abspath(__file__))
-arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../feeders", "Linha_BT", "resultados.csv"))
+
+arquivo_resultados = \
+ str(pathlib.Path(script_path).joinpath("../../Feeders", "Trafo_MT_BT", "resultados.csv"))
 
 
 completo_df = pd.read_csv(arquivo_resultados, index_col=0)
 
-# Casos 2 e 3 sem reator e carga desequilibrada nao validos
-val = (completo_df["Caso"] == "Caso 2") & (completo_df["Reator na Carga"] == False) & (completo_df["Carga condicao"] == "Desequilibrada")
-df = completo_df[~ val]
-val = (completo_df["Caso"] == "Caso 3") & (completo_df["Reator na Carga"] == False) & (completo_df["Carga condicao"] == "Desequilibrada")
-df = df[~ val]
+eq_df = completo_df[completo_df["Carga Equilibrada"]] #[["Caso", "Perdas kWh"]]
+des_df = completo_df[~ completo_df["Carga Equilibrada"]] #[["Caso", "Perdas kWh"]]
 
-def plot(data, x, y, hue, col, row):
- sns.catplot(kind="swarm", x=x, y=y, data=data, hue=hue, col=col, row=row, height=4, aspect=1.5)
- plt.tight_layout()
- plt.show()
- plt.clf()
- plt.close()
+calcula_erro(eq_df)
+calcula_erro(des_df)
 
-plot(data=df, x="Caso", y="Perdas %", hue="Energia Injetada kWh", col="Reator na Carga", row="Carga condicao")
+des_df.sort_values("Carregamento", inplace=True)
+eq_df.sort_values("Carregamento", inplace=True)
+
+eq_res = eq_df.groupby("Caso").mean()
+des_res = des_df.groupby("Caso").mean()
+
+print("here")

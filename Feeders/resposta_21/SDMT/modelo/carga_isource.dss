@@ -1,0 +1,3 @@
+New Isource.ia amps=(-590 3 sqrt /) phases=1 bus1=B.1 bus2=B.2 angle=30
+New Isource.ib amps=(-590 3 sqrt /) phases=1 bus1=B.2 bus2=B.3 angle=-90
+New Isource.ic amps=(-590 3 sqrt /) phases=1 bus1=B.3 bus2=B.1 angle=150

@@ -2,7 +2,7 @@
 # @Time    : 9/24/2022 3:13 PM
 # @Author  : Paulo Radatz
 # @Email   : pradatz@epri.com
-# @File    : dados_sdbt.py
+# @File    : dados_linhas.py
 # @Software: PyCharm
 
 import os
@@ -49,21 +49,31 @@ for key, value in mpl_dict.items():
 def calcula_erro(df):
  erro_per = list()
  for index, row in df.iterrows():
-  atual = row["Perdas kWh por km"]
-  base = df[(df["Caso"] == "v") & (df["Carregamento"] == row["Carregamento"])]["Perdas kWh por km"].values[0]
+  atual = row["Perdas kWh"]
+  base = df[(df["Caso"] == "v") & (df["Carregamento"] == row["Carregamento"])]["Perdas kWh"].values[0]
   erro_per.append((atual - base) * 100 / base)
  df["Erro Percentual"] = erro_per
 
 script_path = os.path.dirname(os.path.abspath(__file__))
-arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../feeders", "resposta_21", "SDBT", "resultados.csv"))
 
+arquivo_resultados = \
+ str(pathlib.Path(script_path).joinpath("../../feeders", "resposta_21", "SDBT", "resultados.csv"))
+
+# arquivo_resultados = \
+#  str(pathlib.Path(script_path).joinpath("../../feeders", "resposta_21", "SDMT", "resultados.csv"))
 
 completo_df = pd.read_csv(arquivo_resultados, index_col=0)
 
-eq_df = completo_df[completo_df["Carga Equilibrada"]] #[["Caso", "Perdas kWh por km"]]
-des_df = completo_df[~ completo_df["Carga Equilibrada"]] #[["Caso", "Perdas kWh por km"]]
+eq_df = completo_df[completo_df["Carga Equilibrada"]] #[["Caso", "Perdas kWh"]]
+des_df = completo_df[~ completo_df["Carga Equilibrada"]] #[["Caso", "Perdas kWh"]]
 
 calcula_erro(eq_df)
 calcula_erro(des_df)
+
+des_df.sort_values("Carregamento", inplace=True)
+eq_df.sort_values("Carregamento", inplace=True)
+
+eq_res = eq_df.groupby("Caso").mean()
+des_res = des_df.groupby("Caso").mean()
 
 print("here")

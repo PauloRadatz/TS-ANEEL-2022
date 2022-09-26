@@ -15,12 +15,9 @@ New reactor.R phases=1 bus1=A.4 bus2=A.0 r=15 x=0
 
 New Line.L phases=4 bus1=A.1.2.3.4 bus2=B.1.2.3.4 switch=yes
 
-New Load.LA_M1 phases=1 bus1=B.1.4 kv=0.127 kw=3 pf=0.92 model=2
-New Load.LB_M1 phases=1 bus1=B.2.4 kv=0.127 kw=3 pf=0.92 model=2
-New Load.LC_M1 phases=1 bus1=B.3.4 kv=0.127 kw=3 pf=0.92 model=2
-New Load.LA_M2 phases=1 bus1=B.1.4 kv=0.127 kw=3 pf=0.92 model=3
-New Load.LB_M2 phases=1 bus1=B.2.4 kv=0.127 kw=3 pf=0.92 model=3
-New Load.LC_M2 phases=1 bus1=B.3.4 kv=0.127 kw=3 pf=0.92 model=3
+New Load.LA phases=1 bus1=B.1.4 kv=0.127 kw=(75 3 /) pf=1 model=1
+New Load.LB phases=1 bus1=B.2.4 kv=0.127 kw=(75 3 /) pf=1 model=1
+New Load.LC phases=1 bus1=B.3.4 kv=0.127 kw=(75 3 /) pf=1 model=1
 
 Set voltagebases=[13.8 0.22]
 Calcvoltagebases
