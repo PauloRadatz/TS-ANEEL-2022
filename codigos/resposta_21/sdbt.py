@@ -48,7 +48,7 @@ for carga_equilibrada, caso, carregamento_pu in list(itertools.product(*[carga_e
     elif caso == "ii":
         caso_dss = casos_dss_list[2]
     elif caso == "iii":
-        caso_dss = casos_dss_list[2]
+        caso_dss = casos_dss_list[3]
 
     casos_resultado_list.append(caso)
     carga_equilibrada_resultado_list.append(carga_equilibrada)
