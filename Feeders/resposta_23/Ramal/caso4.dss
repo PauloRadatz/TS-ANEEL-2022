@@ -1,0 +1,14 @@
+ClearAll
+
+redirect modelo/fonte_ideal.dss
+redirect modelo/trafo_mt_bt_ideal.dss
+redirect modelo/arranjo.dss
+redirect modelo/carga_isource.dss
+
+New Line.L phases=2 bus1=A.1.4 bus2=B.1.4 length=0.03 geometry=SI1_35mm2 earthmodel=Carson units=km 
+
+New reactor.R_carga phases=1 bus1=B.4 bus2=B.0 r=15 x=0
+
+batchedit reactor..* r=0.00000001
+
+redirect modelo/medidor.dss
