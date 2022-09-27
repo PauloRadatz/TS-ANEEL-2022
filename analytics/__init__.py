@@ -6,3 +6,4 @@
 # @Software: PyCharm
 
 from .EnergyAllocation import do_energy_allocation
+from .EnergyAllocation_2 import do_energy_allocation_2
