@@ -5,7 +5,7 @@ redirect modelo/trafo_mt_bt_ideal.dss
 redirect modelo/carga_isource.dss
 
 New Line.L phases=2 bus1=A.1.4 bus2=B.1.4 length=0.03 units=km 
-~ r1=0.9904324 x1=0.112468 c1=45.15
-~ r0=1.1680852 x0=2.63866 c0=-17.15
+~ r1=0.991 x1=0.112468 c1=45.15
+~ r0=1.1686552 x0=2.63866 c0=-17.15
 
 redirect modelo/medidor.dss
