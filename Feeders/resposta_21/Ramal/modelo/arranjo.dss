@@ -1,6 +1,6 @@
 // condutor Multiplexado 35mm²
 New Wiredata.35mm2
-~ GMR=0.0027 DIAM=0.7 RAC=0.99043 normamps=120
+~ GMR=0.0027 DIAM=0.7 RAC=0.991 normamps=120
 ~ GMRunits=m RADunits=cm Runits=km
 
 // Cabo multiplexado / isolado - SI1 - 35mm²
