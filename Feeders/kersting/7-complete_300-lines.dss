@@ -1,0 +1,647 @@
+ClearAll
+
+New Circuit.Fonte phases=3 basekv=12.47 bus1=A.1.2.3 bus2=A.4.4.4 model=ideal
+
+! 556,550 26/7
+New Wiredata.Phase GMR=0.0303 DIAM=0.927 RAC=0.1859
+~ NormAmps=730
+~ Runits=mi radunits=in gmrunits=ft
+
+! 4/0 ACSR
+New Wiredata.Neutral GMR=0.00814 DIAM=0.563 RAC=0.592
+~ NormAmps=340
+~ Runits=mi radunits=in gmrunits=ft
+
+New Linegeometry.PoleExample nconds=4 nphases=3 reduce=no
+~ cond=1 Wire=Phase x= -4 h=29 units=ft
+~ cond=2 Wire=Phase x= 3 h=29 units=ft
+~ cond=3 Wire=Phase x= -1.5 h=29 units=ft
+~ cond=4 Wire=Neutral x= 0 h=25 units=ft
+
+/*
+New Line.LineExample phases=4 bus1=A.1.2.3.4 bus2=B.1.2.3.4
+~ Geometry=PoleExample
+~ Length=3 units=mi
+~ EarthModel=Carson
+
+New Reactor.A phases=1 bus1=A.4 bus2=A.0 r=15 x=0
+New Reactor.B phases=1 bus1=B.4 bus2=B.0 r=15 x=0
+*/
+
+New Line.A phases=4 bus1=A.1.2.3.4 bus2=A_1.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_1 phases=4 bus1=A_1.1.2.3.4 bus2=A_2.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_2 phases=4 bus1=A_2.1.2.3.4 bus2=A_3.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_3 phases=4 bus1=A_3.1.2.3.4 bus2=A_4.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_4 phases=4 bus1=A_4.1.2.3.4 bus2=A_5.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_5 phases=4 bus1=A_5.1.2.3.4 bus2=A_6.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_6 phases=4 bus1=A_6.1.2.3.4 bus2=A_7.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_7 phases=4 bus1=A_7.1.2.3.4 bus2=A_8.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_8 phases=4 bus1=A_8.1.2.3.4 bus2=A_9.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_9 phases=4 bus1=A_9.1.2.3.4 bus2=A_10.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_10 phases=4 bus1=A_10.1.2.3.4 bus2=A_11.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_11 phases=4 bus1=A_11.1.2.3.4 bus2=A_12.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_12 phases=4 bus1=A_12.1.2.3.4 bus2=A_13.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_13 phases=4 bus1=A_13.1.2.3.4 bus2=A_14.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_14 phases=4 bus1=A_14.1.2.3.4 bus2=A_15.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_15 phases=4 bus1=A_15.1.2.3.4 bus2=A_16.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_16 phases=4 bus1=A_16.1.2.3.4 bus2=A_17.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_17 phases=4 bus1=A_17.1.2.3.4 bus2=A_18.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_18 phases=4 bus1=A_18.1.2.3.4 bus2=A_19.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_19 phases=4 bus1=A_19.1.2.3.4 bus2=A_20.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_20 phases=4 bus1=A_20.1.2.3.4 bus2=A_21.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_21 phases=4 bus1=A_21.1.2.3.4 bus2=A_22.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_22 phases=4 bus1=A_22.1.2.3.4 bus2=A_23.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_23 phases=4 bus1=A_23.1.2.3.4 bus2=A_24.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_24 phases=4 bus1=A_24.1.2.3.4 bus2=A_25.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_25 phases=4 bus1=A_25.1.2.3.4 bus2=A_26.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_26 phases=4 bus1=A_26.1.2.3.4 bus2=A_27.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_27 phases=4 bus1=A_27.1.2.3.4 bus2=A_28.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_28 phases=4 bus1=A_28.1.2.3.4 bus2=A_29.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_29 phases=4 bus1=A_29.1.2.3.4 bus2=A_30.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_30 phases=4 bus1=A_30.1.2.3.4 bus2=A_31.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_31 phases=4 bus1=A_31.1.2.3.4 bus2=A_32.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_32 phases=4 bus1=A_32.1.2.3.4 bus2=A_33.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_33 phases=4 bus1=A_33.1.2.3.4 bus2=A_34.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_34 phases=4 bus1=A_34.1.2.3.4 bus2=A_35.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_35 phases=4 bus1=A_35.1.2.3.4 bus2=A_36.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_36 phases=4 bus1=A_36.1.2.3.4 bus2=A_37.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_37 phases=4 bus1=A_37.1.2.3.4 bus2=A_38.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_38 phases=4 bus1=A_38.1.2.3.4 bus2=A_39.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_39 phases=4 bus1=A_39.1.2.3.4 bus2=A_40.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_40 phases=4 bus1=A_40.1.2.3.4 bus2=A_41.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_41 phases=4 bus1=A_41.1.2.3.4 bus2=A_42.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_42 phases=4 bus1=A_42.1.2.3.4 bus2=A_43.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_43 phases=4 bus1=A_43.1.2.3.4 bus2=A_44.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_44 phases=4 bus1=A_44.1.2.3.4 bus2=A_45.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_45 phases=4 bus1=A_45.1.2.3.4 bus2=A_46.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_46 phases=4 bus1=A_46.1.2.3.4 bus2=A_47.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_47 phases=4 bus1=A_47.1.2.3.4 bus2=A_48.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_48 phases=4 bus1=A_48.1.2.3.4 bus2=A_49.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_49 phases=4 bus1=A_49.1.2.3.4 bus2=A_50.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_50 phases=4 bus1=A_50.1.2.3.4 bus2=A_51.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_51 phases=4 bus1=A_51.1.2.3.4 bus2=A_52.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_52 phases=4 bus1=A_52.1.2.3.4 bus2=A_53.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_53 phases=4 bus1=A_53.1.2.3.4 bus2=A_54.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_54 phases=4 bus1=A_54.1.2.3.4 bus2=A_55.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_55 phases=4 bus1=A_55.1.2.3.4 bus2=A_56.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_56 phases=4 bus1=A_56.1.2.3.4 bus2=A_57.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_57 phases=4 bus1=A_57.1.2.3.4 bus2=A_58.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_58 phases=4 bus1=A_58.1.2.3.4 bus2=A_59.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_59 phases=4 bus1=A_59.1.2.3.4 bus2=A_60.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_60 phases=4 bus1=A_60.1.2.3.4 bus2=A_61.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_61 phases=4 bus1=A_61.1.2.3.4 bus2=A_62.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_62 phases=4 bus1=A_62.1.2.3.4 bus2=A_63.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_63 phases=4 bus1=A_63.1.2.3.4 bus2=A_64.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_64 phases=4 bus1=A_64.1.2.3.4 bus2=A_65.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_65 phases=4 bus1=A_65.1.2.3.4 bus2=A_66.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_66 phases=4 bus1=A_66.1.2.3.4 bus2=A_67.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_67 phases=4 bus1=A_67.1.2.3.4 bus2=A_68.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_68 phases=4 bus1=A_68.1.2.3.4 bus2=A_69.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_69 phases=4 bus1=A_69.1.2.3.4 bus2=A_70.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_70 phases=4 bus1=A_70.1.2.3.4 bus2=A_71.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_71 phases=4 bus1=A_71.1.2.3.4 bus2=A_72.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_72 phases=4 bus1=A_72.1.2.3.4 bus2=A_73.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_73 phases=4 bus1=A_73.1.2.3.4 bus2=A_74.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_74 phases=4 bus1=A_74.1.2.3.4 bus2=A_75.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_75 phases=4 bus1=A_75.1.2.3.4 bus2=A_76.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_76 phases=4 bus1=A_76.1.2.3.4 bus2=A_77.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_77 phases=4 bus1=A_77.1.2.3.4 bus2=A_78.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_78 phases=4 bus1=A_78.1.2.3.4 bus2=A_79.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_79 phases=4 bus1=A_79.1.2.3.4 bus2=A_80.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_80 phases=4 bus1=A_80.1.2.3.4 bus2=A_81.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_81 phases=4 bus1=A_81.1.2.3.4 bus2=A_82.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_82 phases=4 bus1=A_82.1.2.3.4 bus2=A_83.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_83 phases=4 bus1=A_83.1.2.3.4 bus2=A_84.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_84 phases=4 bus1=A_84.1.2.3.4 bus2=A_85.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_85 phases=4 bus1=A_85.1.2.3.4 bus2=A_86.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_86 phases=4 bus1=A_86.1.2.3.4 bus2=A_87.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_87 phases=4 bus1=A_87.1.2.3.4 bus2=A_88.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_88 phases=4 bus1=A_88.1.2.3.4 bus2=A_89.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_89 phases=4 bus1=A_89.1.2.3.4 bus2=A_90.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_90 phases=4 bus1=A_90.1.2.3.4 bus2=A_91.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_91 phases=4 bus1=A_91.1.2.3.4 bus2=A_92.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_92 phases=4 bus1=A_92.1.2.3.4 bus2=A_93.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_93 phases=4 bus1=A_93.1.2.3.4 bus2=A_94.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_94 phases=4 bus1=A_94.1.2.3.4 bus2=A_95.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_95 phases=4 bus1=A_95.1.2.3.4 bus2=A_96.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_96 phases=4 bus1=A_96.1.2.3.4 bus2=A_97.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_97 phases=4 bus1=A_97.1.2.3.4 bus2=A_98.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_98 phases=4 bus1=A_98.1.2.3.4 bus2=A_99.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_99 phases=4 bus1=A_99.1.2.3.4 bus2=A_100.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_100 phases=4 bus1=A_100.1.2.3.4 bus2=A_101.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_101 phases=4 bus1=A_101.1.2.3.4 bus2=A_102.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_102 phases=4 bus1=A_102.1.2.3.4 bus2=A_103.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_103 phases=4 bus1=A_103.1.2.3.4 bus2=A_104.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_104 phases=4 bus1=A_104.1.2.3.4 bus2=A_105.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_105 phases=4 bus1=A_105.1.2.3.4 bus2=A_106.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_106 phases=4 bus1=A_106.1.2.3.4 bus2=A_107.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_107 phases=4 bus1=A_107.1.2.3.4 bus2=A_108.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_108 phases=4 bus1=A_108.1.2.3.4 bus2=A_109.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_109 phases=4 bus1=A_109.1.2.3.4 bus2=A_110.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_110 phases=4 bus1=A_110.1.2.3.4 bus2=A_111.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_111 phases=4 bus1=A_111.1.2.3.4 bus2=A_112.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_112 phases=4 bus1=A_112.1.2.3.4 bus2=A_113.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_113 phases=4 bus1=A_113.1.2.3.4 bus2=A_114.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_114 phases=4 bus1=A_114.1.2.3.4 bus2=A_115.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_115 phases=4 bus1=A_115.1.2.3.4 bus2=A_116.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_116 phases=4 bus1=A_116.1.2.3.4 bus2=A_117.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_117 phases=4 bus1=A_117.1.2.3.4 bus2=A_118.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_118 phases=4 bus1=A_118.1.2.3.4 bus2=A_119.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_119 phases=4 bus1=A_119.1.2.3.4 bus2=A_120.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_120 phases=4 bus1=A_120.1.2.3.4 bus2=A_121.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_121 phases=4 bus1=A_121.1.2.3.4 bus2=A_122.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_122 phases=4 bus1=A_122.1.2.3.4 bus2=A_123.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_123 phases=4 bus1=A_123.1.2.3.4 bus2=A_124.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_124 phases=4 bus1=A_124.1.2.3.4 bus2=A_125.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_125 phases=4 bus1=A_125.1.2.3.4 bus2=A_126.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_126 phases=4 bus1=A_126.1.2.3.4 bus2=A_127.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_127 phases=4 bus1=A_127.1.2.3.4 bus2=A_128.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_128 phases=4 bus1=A_128.1.2.3.4 bus2=A_129.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_129 phases=4 bus1=A_129.1.2.3.4 bus2=A_130.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_130 phases=4 bus1=A_130.1.2.3.4 bus2=A_131.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_131 phases=4 bus1=A_131.1.2.3.4 bus2=A_132.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_132 phases=4 bus1=A_132.1.2.3.4 bus2=A_133.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_133 phases=4 bus1=A_133.1.2.3.4 bus2=A_134.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_134 phases=4 bus1=A_134.1.2.3.4 bus2=A_135.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_135 phases=4 bus1=A_135.1.2.3.4 bus2=A_136.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_136 phases=4 bus1=A_136.1.2.3.4 bus2=A_137.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_137 phases=4 bus1=A_137.1.2.3.4 bus2=A_138.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_138 phases=4 bus1=A_138.1.2.3.4 bus2=A_139.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_139 phases=4 bus1=A_139.1.2.3.4 bus2=A_140.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_140 phases=4 bus1=A_140.1.2.3.4 bus2=A_141.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_141 phases=4 bus1=A_141.1.2.3.4 bus2=A_142.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_142 phases=4 bus1=A_142.1.2.3.4 bus2=A_143.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_143 phases=4 bus1=A_143.1.2.3.4 bus2=A_144.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_144 phases=4 bus1=A_144.1.2.3.4 bus2=A_145.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_145 phases=4 bus1=A_145.1.2.3.4 bus2=A_146.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_146 phases=4 bus1=A_146.1.2.3.4 bus2=A_147.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_147 phases=4 bus1=A_147.1.2.3.4 bus2=A_148.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_148 phases=4 bus1=A_148.1.2.3.4 bus2=A_149.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_149 phases=4 bus1=A_149.1.2.3.4 bus2=A_150.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_150 phases=4 bus1=A_150.1.2.3.4 bus2=A_151.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_151 phases=4 bus1=A_151.1.2.3.4 bus2=A_152.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_152 phases=4 bus1=A_152.1.2.3.4 bus2=A_153.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_153 phases=4 bus1=A_153.1.2.3.4 bus2=A_154.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_154 phases=4 bus1=A_154.1.2.3.4 bus2=A_155.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_155 phases=4 bus1=A_155.1.2.3.4 bus2=A_156.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_156 phases=4 bus1=A_156.1.2.3.4 bus2=A_157.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_157 phases=4 bus1=A_157.1.2.3.4 bus2=A_158.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_158 phases=4 bus1=A_158.1.2.3.4 bus2=A_159.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_159 phases=4 bus1=A_159.1.2.3.4 bus2=A_160.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_160 phases=4 bus1=A_160.1.2.3.4 bus2=A_161.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_161 phases=4 bus1=A_161.1.2.3.4 bus2=A_162.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_162 phases=4 bus1=A_162.1.2.3.4 bus2=A_163.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_163 phases=4 bus1=A_163.1.2.3.4 bus2=A_164.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_164 phases=4 bus1=A_164.1.2.3.4 bus2=A_165.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_165 phases=4 bus1=A_165.1.2.3.4 bus2=A_166.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_166 phases=4 bus1=A_166.1.2.3.4 bus2=A_167.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_167 phases=4 bus1=A_167.1.2.3.4 bus2=A_168.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_168 phases=4 bus1=A_168.1.2.3.4 bus2=A_169.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_169 phases=4 bus1=A_169.1.2.3.4 bus2=A_170.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_170 phases=4 bus1=A_170.1.2.3.4 bus2=A_171.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_171 phases=4 bus1=A_171.1.2.3.4 bus2=A_172.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_172 phases=4 bus1=A_172.1.2.3.4 bus2=A_173.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_173 phases=4 bus1=A_173.1.2.3.4 bus2=A_174.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_174 phases=4 bus1=A_174.1.2.3.4 bus2=A_175.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_175 phases=4 bus1=A_175.1.2.3.4 bus2=A_176.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_176 phases=4 bus1=A_176.1.2.3.4 bus2=A_177.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_177 phases=4 bus1=A_177.1.2.3.4 bus2=A_178.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_178 phases=4 bus1=A_178.1.2.3.4 bus2=A_179.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_179 phases=4 bus1=A_179.1.2.3.4 bus2=A_180.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_180 phases=4 bus1=A_180.1.2.3.4 bus2=A_181.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_181 phases=4 bus1=A_181.1.2.3.4 bus2=A_182.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_182 phases=4 bus1=A_182.1.2.3.4 bus2=A_183.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_183 phases=4 bus1=A_183.1.2.3.4 bus2=A_184.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_184 phases=4 bus1=A_184.1.2.3.4 bus2=A_185.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_185 phases=4 bus1=A_185.1.2.3.4 bus2=A_186.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_186 phases=4 bus1=A_186.1.2.3.4 bus2=A_187.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_187 phases=4 bus1=A_187.1.2.3.4 bus2=A_188.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_188 phases=4 bus1=A_188.1.2.3.4 bus2=A_189.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_189 phases=4 bus1=A_189.1.2.3.4 bus2=A_190.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_190 phases=4 bus1=A_190.1.2.3.4 bus2=A_191.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_191 phases=4 bus1=A_191.1.2.3.4 bus2=A_192.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_192 phases=4 bus1=A_192.1.2.3.4 bus2=A_193.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_193 phases=4 bus1=A_193.1.2.3.4 bus2=A_194.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_194 phases=4 bus1=A_194.1.2.3.4 bus2=A_195.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_195 phases=4 bus1=A_195.1.2.3.4 bus2=A_196.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_196 phases=4 bus1=A_196.1.2.3.4 bus2=A_197.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_197 phases=4 bus1=A_197.1.2.3.4 bus2=A_198.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_198 phases=4 bus1=A_198.1.2.3.4 bus2=A_199.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_199 phases=4 bus1=A_199.1.2.3.4 bus2=A_200.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_200 phases=4 bus1=A_200.1.2.3.4 bus2=A_201.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_201 phases=4 bus1=A_201.1.2.3.4 bus2=A_202.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_202 phases=4 bus1=A_202.1.2.3.4 bus2=A_203.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_203 phases=4 bus1=A_203.1.2.3.4 bus2=A_204.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_204 phases=4 bus1=A_204.1.2.3.4 bus2=A_205.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_205 phases=4 bus1=A_205.1.2.3.4 bus2=A_206.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_206 phases=4 bus1=A_206.1.2.3.4 bus2=A_207.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_207 phases=4 bus1=A_207.1.2.3.4 bus2=A_208.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_208 phases=4 bus1=A_208.1.2.3.4 bus2=A_209.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_209 phases=4 bus1=A_209.1.2.3.4 bus2=A_210.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_210 phases=4 bus1=A_210.1.2.3.4 bus2=A_211.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_211 phases=4 bus1=A_211.1.2.3.4 bus2=A_212.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_212 phases=4 bus1=A_212.1.2.3.4 bus2=A_213.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_213 phases=4 bus1=A_213.1.2.3.4 bus2=A_214.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_214 phases=4 bus1=A_214.1.2.3.4 bus2=A_215.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_215 phases=4 bus1=A_215.1.2.3.4 bus2=A_216.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_216 phases=4 bus1=A_216.1.2.3.4 bus2=A_217.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_217 phases=4 bus1=A_217.1.2.3.4 bus2=A_218.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_218 phases=4 bus1=A_218.1.2.3.4 bus2=A_219.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_219 phases=4 bus1=A_219.1.2.3.4 bus2=A_220.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_220 phases=4 bus1=A_220.1.2.3.4 bus2=A_221.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_221 phases=4 bus1=A_221.1.2.3.4 bus2=A_222.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_222 phases=4 bus1=A_222.1.2.3.4 bus2=A_223.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_223 phases=4 bus1=A_223.1.2.3.4 bus2=A_224.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_224 phases=4 bus1=A_224.1.2.3.4 bus2=A_225.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_225 phases=4 bus1=A_225.1.2.3.4 bus2=A_226.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_226 phases=4 bus1=A_226.1.2.3.4 bus2=A_227.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_227 phases=4 bus1=A_227.1.2.3.4 bus2=A_228.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_228 phases=4 bus1=A_228.1.2.3.4 bus2=A_229.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_229 phases=4 bus1=A_229.1.2.3.4 bus2=A_230.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_230 phases=4 bus1=A_230.1.2.3.4 bus2=A_231.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_231 phases=4 bus1=A_231.1.2.3.4 bus2=A_232.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_232 phases=4 bus1=A_232.1.2.3.4 bus2=A_233.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_233 phases=4 bus1=A_233.1.2.3.4 bus2=A_234.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_234 phases=4 bus1=A_234.1.2.3.4 bus2=A_235.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_235 phases=4 bus1=A_235.1.2.3.4 bus2=A_236.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_236 phases=4 bus1=A_236.1.2.3.4 bus2=A_237.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_237 phases=4 bus1=A_237.1.2.3.4 bus2=A_238.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_238 phases=4 bus1=A_238.1.2.3.4 bus2=A_239.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_239 phases=4 bus1=A_239.1.2.3.4 bus2=A_240.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_240 phases=4 bus1=A_240.1.2.3.4 bus2=A_241.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_241 phases=4 bus1=A_241.1.2.3.4 bus2=A_242.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_242 phases=4 bus1=A_242.1.2.3.4 bus2=A_243.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_243 phases=4 bus1=A_243.1.2.3.4 bus2=A_244.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_244 phases=4 bus1=A_244.1.2.3.4 bus2=A_245.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_245 phases=4 bus1=A_245.1.2.3.4 bus2=A_246.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_246 phases=4 bus1=A_246.1.2.3.4 bus2=A_247.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_247 phases=4 bus1=A_247.1.2.3.4 bus2=A_248.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_248 phases=4 bus1=A_248.1.2.3.4 bus2=A_249.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_249 phases=4 bus1=A_249.1.2.3.4 bus2=A_250.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_250 phases=4 bus1=A_250.1.2.3.4 bus2=A_251.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_251 phases=4 bus1=A_251.1.2.3.4 bus2=A_252.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_252 phases=4 bus1=A_252.1.2.3.4 bus2=A_253.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_253 phases=4 bus1=A_253.1.2.3.4 bus2=A_254.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_254 phases=4 bus1=A_254.1.2.3.4 bus2=A_255.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_255 phases=4 bus1=A_255.1.2.3.4 bus2=A_256.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_256 phases=4 bus1=A_256.1.2.3.4 bus2=A_257.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_257 phases=4 bus1=A_257.1.2.3.4 bus2=A_258.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_258 phases=4 bus1=A_258.1.2.3.4 bus2=A_259.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_259 phases=4 bus1=A_259.1.2.3.4 bus2=A_260.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_260 phases=4 bus1=A_260.1.2.3.4 bus2=A_261.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_261 phases=4 bus1=A_261.1.2.3.4 bus2=A_262.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_262 phases=4 bus1=A_262.1.2.3.4 bus2=A_263.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_263 phases=4 bus1=A_263.1.2.3.4 bus2=A_264.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_264 phases=4 bus1=A_264.1.2.3.4 bus2=A_265.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_265 phases=4 bus1=A_265.1.2.3.4 bus2=A_266.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_266 phases=4 bus1=A_266.1.2.3.4 bus2=A_267.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_267 phases=4 bus1=A_267.1.2.3.4 bus2=A_268.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_268 phases=4 bus1=A_268.1.2.3.4 bus2=A_269.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_269 phases=4 bus1=A_269.1.2.3.4 bus2=A_270.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_270 phases=4 bus1=A_270.1.2.3.4 bus2=A_271.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_271 phases=4 bus1=A_271.1.2.3.4 bus2=A_272.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_272 phases=4 bus1=A_272.1.2.3.4 bus2=A_273.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_273 phases=4 bus1=A_273.1.2.3.4 bus2=A_274.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_274 phases=4 bus1=A_274.1.2.3.4 bus2=A_275.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_275 phases=4 bus1=A_275.1.2.3.4 bus2=A_276.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_276 phases=4 bus1=A_276.1.2.3.4 bus2=A_277.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_277 phases=4 bus1=A_277.1.2.3.4 bus2=A_278.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_278 phases=4 bus1=A_278.1.2.3.4 bus2=A_279.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_279 phases=4 bus1=A_279.1.2.3.4 bus2=A_280.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_280 phases=4 bus1=A_280.1.2.3.4 bus2=A_281.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_281 phases=4 bus1=A_281.1.2.3.4 bus2=A_282.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_282 phases=4 bus1=A_282.1.2.3.4 bus2=A_283.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_283 phases=4 bus1=A_283.1.2.3.4 bus2=A_284.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_284 phases=4 bus1=A_284.1.2.3.4 bus2=A_285.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_285 phases=4 bus1=A_285.1.2.3.4 bus2=A_286.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_286 phases=4 bus1=A_286.1.2.3.4 bus2=A_287.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_287 phases=4 bus1=A_287.1.2.3.4 bus2=A_288.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_288 phases=4 bus1=A_288.1.2.3.4 bus2=A_289.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_289 phases=4 bus1=A_289.1.2.3.4 bus2=A_290.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_290 phases=4 bus1=A_290.1.2.3.4 bus2=A_291.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_291 phases=4 bus1=A_291.1.2.3.4 bus2=A_292.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_292 phases=4 bus1=A_292.1.2.3.4 bus2=A_293.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_293 phases=4 bus1=A_293.1.2.3.4 bus2=A_294.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_294 phases=4 bus1=A_294.1.2.3.4 bus2=A_295.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_295 phases=4 bus1=A_295.1.2.3.4 bus2=A_296.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_296 phases=4 bus1=A_296.1.2.3.4 bus2=A_297.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_297 phases=4 bus1=A_297.1.2.3.4 bus2=A_298.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_298 phases=4 bus1=A_298.1.2.3.4 bus2=A_299.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Line.A_299 phases=4 bus1=A_299.1.2.3.4 bus2=B.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
+New Reactor.A phases=1 bus1=A.4 bus2=A.0 r=15 x=0
+New Reactor.A_1 phases=1 bus1=A_1.4 bus2=A_1.0 r=15 x=0
+New Reactor.A_2 phases=1 bus1=A_2.4 bus2=A_2.0 r=15 x=0
+New Reactor.A_3 phases=1 bus1=A_3.4 bus2=A_3.0 r=15 x=0
+New Reactor.A_4 phases=1 bus1=A_4.4 bus2=A_4.0 r=15 x=0
+New Reactor.A_5 phases=1 bus1=A_5.4 bus2=A_5.0 r=15 x=0
+New Reactor.A_6 phases=1 bus1=A_6.4 bus2=A_6.0 r=15 x=0
+New Reactor.A_7 phases=1 bus1=A_7.4 bus2=A_7.0 r=15 x=0
+New Reactor.A_8 phases=1 bus1=A_8.4 bus2=A_8.0 r=15 x=0
+New Reactor.A_9 phases=1 bus1=A_9.4 bus2=A_9.0 r=15 x=0
+New Reactor.A_10 phases=1 bus1=A_10.4 bus2=A_10.0 r=15 x=0
+New Reactor.A_11 phases=1 bus1=A_11.4 bus2=A_11.0 r=15 x=0
+New Reactor.A_12 phases=1 bus1=A_12.4 bus2=A_12.0 r=15 x=0
+New Reactor.A_13 phases=1 bus1=A_13.4 bus2=A_13.0 r=15 x=0
+New Reactor.A_14 phases=1 bus1=A_14.4 bus2=A_14.0 r=15 x=0
+New Reactor.A_15 phases=1 bus1=A_15.4 bus2=A_15.0 r=15 x=0
+New Reactor.A_16 phases=1 bus1=A_16.4 bus2=A_16.0 r=15 x=0
+New Reactor.A_17 phases=1 bus1=A_17.4 bus2=A_17.0 r=15 x=0
+New Reactor.A_18 phases=1 bus1=A_18.4 bus2=A_18.0 r=15 x=0
+New Reactor.A_19 phases=1 bus1=A_19.4 bus2=A_19.0 r=15 x=0
+New Reactor.A_20 phases=1 bus1=A_20.4 bus2=A_20.0 r=15 x=0
+New Reactor.A_21 phases=1 bus1=A_21.4 bus2=A_21.0 r=15 x=0
+New Reactor.A_22 phases=1 bus1=A_22.4 bus2=A_22.0 r=15 x=0
+New Reactor.A_23 phases=1 bus1=A_23.4 bus2=A_23.0 r=15 x=0
+New Reactor.A_24 phases=1 bus1=A_24.4 bus2=A_24.0 r=15 x=0
+New Reactor.A_25 phases=1 bus1=A_25.4 bus2=A_25.0 r=15 x=0
+New Reactor.A_26 phases=1 bus1=A_26.4 bus2=A_26.0 r=15 x=0
+New Reactor.A_27 phases=1 bus1=A_27.4 bus2=A_27.0 r=15 x=0
+New Reactor.A_28 phases=1 bus1=A_28.4 bus2=A_28.0 r=15 x=0
+New Reactor.A_29 phases=1 bus1=A_29.4 bus2=A_29.0 r=15 x=0
+New Reactor.A_30 phases=1 bus1=A_30.4 bus2=A_30.0 r=15 x=0
+New Reactor.A_31 phases=1 bus1=A_31.4 bus2=A_31.0 r=15 x=0
+New Reactor.A_32 phases=1 bus1=A_32.4 bus2=A_32.0 r=15 x=0
+New Reactor.A_33 phases=1 bus1=A_33.4 bus2=A_33.0 r=15 x=0
+New Reactor.A_34 phases=1 bus1=A_34.4 bus2=A_34.0 r=15 x=0
+New Reactor.A_35 phases=1 bus1=A_35.4 bus2=A_35.0 r=15 x=0
+New Reactor.A_36 phases=1 bus1=A_36.4 bus2=A_36.0 r=15 x=0
+New Reactor.A_37 phases=1 bus1=A_37.4 bus2=A_37.0 r=15 x=0
+New Reactor.A_38 phases=1 bus1=A_38.4 bus2=A_38.0 r=15 x=0
+New Reactor.A_39 phases=1 bus1=A_39.4 bus2=A_39.0 r=15 x=0
+New Reactor.A_40 phases=1 bus1=A_40.4 bus2=A_40.0 r=15 x=0
+New Reactor.A_41 phases=1 bus1=A_41.4 bus2=A_41.0 r=15 x=0
+New Reactor.A_42 phases=1 bus1=A_42.4 bus2=A_42.0 r=15 x=0
+New Reactor.A_43 phases=1 bus1=A_43.4 bus2=A_43.0 r=15 x=0
+New Reactor.A_44 phases=1 bus1=A_44.4 bus2=A_44.0 r=15 x=0
+New Reactor.A_45 phases=1 bus1=A_45.4 bus2=A_45.0 r=15 x=0
+New Reactor.A_46 phases=1 bus1=A_46.4 bus2=A_46.0 r=15 x=0
+New Reactor.A_47 phases=1 bus1=A_47.4 bus2=A_47.0 r=15 x=0
+New Reactor.A_48 phases=1 bus1=A_48.4 bus2=A_48.0 r=15 x=0
+New Reactor.A_49 phases=1 bus1=A_49.4 bus2=A_49.0 r=15 x=0
+New Reactor.A_50 phases=1 bus1=A_50.4 bus2=A_50.0 r=15 x=0
+New Reactor.A_51 phases=1 bus1=A_51.4 bus2=A_51.0 r=15 x=0
+New Reactor.A_52 phases=1 bus1=A_52.4 bus2=A_52.0 r=15 x=0
+New Reactor.A_53 phases=1 bus1=A_53.4 bus2=A_53.0 r=15 x=0
+New Reactor.A_54 phases=1 bus1=A_54.4 bus2=A_54.0 r=15 x=0
+New Reactor.A_55 phases=1 bus1=A_55.4 bus2=A_55.0 r=15 x=0
+New Reactor.A_56 phases=1 bus1=A_56.4 bus2=A_56.0 r=15 x=0
+New Reactor.A_57 phases=1 bus1=A_57.4 bus2=A_57.0 r=15 x=0
+New Reactor.A_58 phases=1 bus1=A_58.4 bus2=A_58.0 r=15 x=0
+New Reactor.A_59 phases=1 bus1=A_59.4 bus2=A_59.0 r=15 x=0
+New Reactor.A_60 phases=1 bus1=A_60.4 bus2=A_60.0 r=15 x=0
+New Reactor.A_61 phases=1 bus1=A_61.4 bus2=A_61.0 r=15 x=0
+New Reactor.A_62 phases=1 bus1=A_62.4 bus2=A_62.0 r=15 x=0
+New Reactor.A_63 phases=1 bus1=A_63.4 bus2=A_63.0 r=15 x=0
+New Reactor.A_64 phases=1 bus1=A_64.4 bus2=A_64.0 r=15 x=0
+New Reactor.A_65 phases=1 bus1=A_65.4 bus2=A_65.0 r=15 x=0
+New Reactor.A_66 phases=1 bus1=A_66.4 bus2=A_66.0 r=15 x=0
+New Reactor.A_67 phases=1 bus1=A_67.4 bus2=A_67.0 r=15 x=0
+New Reactor.A_68 phases=1 bus1=A_68.4 bus2=A_68.0 r=15 x=0
+New Reactor.A_69 phases=1 bus1=A_69.4 bus2=A_69.0 r=15 x=0
+New Reactor.A_70 phases=1 bus1=A_70.4 bus2=A_70.0 r=15 x=0
+New Reactor.A_71 phases=1 bus1=A_71.4 bus2=A_71.0 r=15 x=0
+New Reactor.A_72 phases=1 bus1=A_72.4 bus2=A_72.0 r=15 x=0
+New Reactor.A_73 phases=1 bus1=A_73.4 bus2=A_73.0 r=15 x=0
+New Reactor.A_74 phases=1 bus1=A_74.4 bus2=A_74.0 r=15 x=0
+New Reactor.A_75 phases=1 bus1=A_75.4 bus2=A_75.0 r=15 x=0
+New Reactor.A_76 phases=1 bus1=A_76.4 bus2=A_76.0 r=15 x=0
+New Reactor.A_77 phases=1 bus1=A_77.4 bus2=A_77.0 r=15 x=0
+New Reactor.A_78 phases=1 bus1=A_78.4 bus2=A_78.0 r=15 x=0
+New Reactor.A_79 phases=1 bus1=A_79.4 bus2=A_79.0 r=15 x=0
+New Reactor.A_80 phases=1 bus1=A_80.4 bus2=A_80.0 r=15 x=0
+New Reactor.A_81 phases=1 bus1=A_81.4 bus2=A_81.0 r=15 x=0
+New Reactor.A_82 phases=1 bus1=A_82.4 bus2=A_82.0 r=15 x=0
+New Reactor.A_83 phases=1 bus1=A_83.4 bus2=A_83.0 r=15 x=0
+New Reactor.A_84 phases=1 bus1=A_84.4 bus2=A_84.0 r=15 x=0
+New Reactor.A_85 phases=1 bus1=A_85.4 bus2=A_85.0 r=15 x=0
+New Reactor.A_86 phases=1 bus1=A_86.4 bus2=A_86.0 r=15 x=0
+New Reactor.A_87 phases=1 bus1=A_87.4 bus2=A_87.0 r=15 x=0
+New Reactor.A_88 phases=1 bus1=A_88.4 bus2=A_88.0 r=15 x=0
+New Reactor.A_89 phases=1 bus1=A_89.4 bus2=A_89.0 r=15 x=0
+New Reactor.A_90 phases=1 bus1=A_90.4 bus2=A_90.0 r=15 x=0
+New Reactor.A_91 phases=1 bus1=A_91.4 bus2=A_91.0 r=15 x=0
+New Reactor.A_92 phases=1 bus1=A_92.4 bus2=A_92.0 r=15 x=0
+New Reactor.A_93 phases=1 bus1=A_93.4 bus2=A_93.0 r=15 x=0
+New Reactor.A_94 phases=1 bus1=A_94.4 bus2=A_94.0 r=15 x=0
+New Reactor.A_95 phases=1 bus1=A_95.4 bus2=A_95.0 r=15 x=0
+New Reactor.A_96 phases=1 bus1=A_96.4 bus2=A_96.0 r=15 x=0
+New Reactor.A_97 phases=1 bus1=A_97.4 bus2=A_97.0 r=15 x=0
+New Reactor.A_98 phases=1 bus1=A_98.4 bus2=A_98.0 r=15 x=0
+New Reactor.A_99 phases=1 bus1=A_99.4 bus2=A_99.0 r=15 x=0
+New Reactor.A_100 phases=1 bus1=A_100.4 bus2=A_100.0 r=15 x=0
+New Reactor.A_101 phases=1 bus1=A_101.4 bus2=A_101.0 r=15 x=0
+New Reactor.A_102 phases=1 bus1=A_102.4 bus2=A_102.0 r=15 x=0
+New Reactor.A_103 phases=1 bus1=A_103.4 bus2=A_103.0 r=15 x=0
+New Reactor.A_104 phases=1 bus1=A_104.4 bus2=A_104.0 r=15 x=0
+New Reactor.A_105 phases=1 bus1=A_105.4 bus2=A_105.0 r=15 x=0
+New Reactor.A_106 phases=1 bus1=A_106.4 bus2=A_106.0 r=15 x=0
+New Reactor.A_107 phases=1 bus1=A_107.4 bus2=A_107.0 r=15 x=0
+New Reactor.A_108 phases=1 bus1=A_108.4 bus2=A_108.0 r=15 x=0
+New Reactor.A_109 phases=1 bus1=A_109.4 bus2=A_109.0 r=15 x=0
+New Reactor.A_110 phases=1 bus1=A_110.4 bus2=A_110.0 r=15 x=0
+New Reactor.A_111 phases=1 bus1=A_111.4 bus2=A_111.0 r=15 x=0
+New Reactor.A_112 phases=1 bus1=A_112.4 bus2=A_112.0 r=15 x=0
+New Reactor.A_113 phases=1 bus1=A_113.4 bus2=A_113.0 r=15 x=0
+New Reactor.A_114 phases=1 bus1=A_114.4 bus2=A_114.0 r=15 x=0
+New Reactor.A_115 phases=1 bus1=A_115.4 bus2=A_115.0 r=15 x=0
+New Reactor.A_116 phases=1 bus1=A_116.4 bus2=A_116.0 r=15 x=0
+New Reactor.A_117 phases=1 bus1=A_117.4 bus2=A_117.0 r=15 x=0
+New Reactor.A_118 phases=1 bus1=A_118.4 bus2=A_118.0 r=15 x=0
+New Reactor.A_119 phases=1 bus1=A_119.4 bus2=A_119.0 r=15 x=0
+New Reactor.A_120 phases=1 bus1=A_120.4 bus2=A_120.0 r=15 x=0
+New Reactor.A_121 phases=1 bus1=A_121.4 bus2=A_121.0 r=15 x=0
+New Reactor.A_122 phases=1 bus1=A_122.4 bus2=A_122.0 r=15 x=0
+New Reactor.A_123 phases=1 bus1=A_123.4 bus2=A_123.0 r=15 x=0
+New Reactor.A_124 phases=1 bus1=A_124.4 bus2=A_124.0 r=15 x=0
+New Reactor.A_125 phases=1 bus1=A_125.4 bus2=A_125.0 r=15 x=0
+New Reactor.A_126 phases=1 bus1=A_126.4 bus2=A_126.0 r=15 x=0
+New Reactor.A_127 phases=1 bus1=A_127.4 bus2=A_127.0 r=15 x=0
+New Reactor.A_128 phases=1 bus1=A_128.4 bus2=A_128.0 r=15 x=0
+New Reactor.A_129 phases=1 bus1=A_129.4 bus2=A_129.0 r=15 x=0
+New Reactor.A_130 phases=1 bus1=A_130.4 bus2=A_130.0 r=15 x=0
+New Reactor.A_131 phases=1 bus1=A_131.4 bus2=A_131.0 r=15 x=0
+New Reactor.A_132 phases=1 bus1=A_132.4 bus2=A_132.0 r=15 x=0
+New Reactor.A_133 phases=1 bus1=A_133.4 bus2=A_133.0 r=15 x=0
+New Reactor.A_134 phases=1 bus1=A_134.4 bus2=A_134.0 r=15 x=0
+New Reactor.A_135 phases=1 bus1=A_135.4 bus2=A_135.0 r=15 x=0
+New Reactor.A_136 phases=1 bus1=A_136.4 bus2=A_136.0 r=15 x=0
+New Reactor.A_137 phases=1 bus1=A_137.4 bus2=A_137.0 r=15 x=0
+New Reactor.A_138 phases=1 bus1=A_138.4 bus2=A_138.0 r=15 x=0
+New Reactor.A_139 phases=1 bus1=A_139.4 bus2=A_139.0 r=15 x=0
+New Reactor.A_140 phases=1 bus1=A_140.4 bus2=A_140.0 r=15 x=0
+New Reactor.A_141 phases=1 bus1=A_141.4 bus2=A_141.0 r=15 x=0
+New Reactor.A_142 phases=1 bus1=A_142.4 bus2=A_142.0 r=15 x=0
+New Reactor.A_143 phases=1 bus1=A_143.4 bus2=A_143.0 r=15 x=0
+New Reactor.A_144 phases=1 bus1=A_144.4 bus2=A_144.0 r=15 x=0
+New Reactor.A_145 phases=1 bus1=A_145.4 bus2=A_145.0 r=15 x=0
+New Reactor.A_146 phases=1 bus1=A_146.4 bus2=A_146.0 r=15 x=0
+New Reactor.A_147 phases=1 bus1=A_147.4 bus2=A_147.0 r=15 x=0
+New Reactor.A_148 phases=1 bus1=A_148.4 bus2=A_148.0 r=15 x=0
+New Reactor.A_149 phases=1 bus1=A_149.4 bus2=A_149.0 r=15 x=0
+New Reactor.A_150 phases=1 bus1=A_150.4 bus2=A_150.0 r=15 x=0
+New Reactor.A_151 phases=1 bus1=A_151.4 bus2=A_151.0 r=15 x=0
+New Reactor.A_152 phases=1 bus1=A_152.4 bus2=A_152.0 r=15 x=0
+New Reactor.A_153 phases=1 bus1=A_153.4 bus2=A_153.0 r=15 x=0
+New Reactor.A_154 phases=1 bus1=A_154.4 bus2=A_154.0 r=15 x=0
+New Reactor.A_155 phases=1 bus1=A_155.4 bus2=A_155.0 r=15 x=0
+New Reactor.A_156 phases=1 bus1=A_156.4 bus2=A_156.0 r=15 x=0
+New Reactor.A_157 phases=1 bus1=A_157.4 bus2=A_157.0 r=15 x=0
+New Reactor.A_158 phases=1 bus1=A_158.4 bus2=A_158.0 r=15 x=0
+New Reactor.A_159 phases=1 bus1=A_159.4 bus2=A_159.0 r=15 x=0
+New Reactor.A_160 phases=1 bus1=A_160.4 bus2=A_160.0 r=15 x=0
+New Reactor.A_161 phases=1 bus1=A_161.4 bus2=A_161.0 r=15 x=0
+New Reactor.A_162 phases=1 bus1=A_162.4 bus2=A_162.0 r=15 x=0
+New Reactor.A_163 phases=1 bus1=A_163.4 bus2=A_163.0 r=15 x=0
+New Reactor.A_164 phases=1 bus1=A_164.4 bus2=A_164.0 r=15 x=0
+New Reactor.A_165 phases=1 bus1=A_165.4 bus2=A_165.0 r=15 x=0
+New Reactor.A_166 phases=1 bus1=A_166.4 bus2=A_166.0 r=15 x=0
+New Reactor.A_167 phases=1 bus1=A_167.4 bus2=A_167.0 r=15 x=0
+New Reactor.A_168 phases=1 bus1=A_168.4 bus2=A_168.0 r=15 x=0
+New Reactor.A_169 phases=1 bus1=A_169.4 bus2=A_169.0 r=15 x=0
+New Reactor.A_170 phases=1 bus1=A_170.4 bus2=A_170.0 r=15 x=0
+New Reactor.A_171 phases=1 bus1=A_171.4 bus2=A_171.0 r=15 x=0
+New Reactor.A_172 phases=1 bus1=A_172.4 bus2=A_172.0 r=15 x=0
+New Reactor.A_173 phases=1 bus1=A_173.4 bus2=A_173.0 r=15 x=0
+New Reactor.A_174 phases=1 bus1=A_174.4 bus2=A_174.0 r=15 x=0
+New Reactor.A_175 phases=1 bus1=A_175.4 bus2=A_175.0 r=15 x=0
+New Reactor.A_176 phases=1 bus1=A_176.4 bus2=A_176.0 r=15 x=0
+New Reactor.A_177 phases=1 bus1=A_177.4 bus2=A_177.0 r=15 x=0
+New Reactor.A_178 phases=1 bus1=A_178.4 bus2=A_178.0 r=15 x=0
+New Reactor.A_179 phases=1 bus1=A_179.4 bus2=A_179.0 r=15 x=0
+New Reactor.A_180 phases=1 bus1=A_180.4 bus2=A_180.0 r=15 x=0
+New Reactor.A_181 phases=1 bus1=A_181.4 bus2=A_181.0 r=15 x=0
+New Reactor.A_182 phases=1 bus1=A_182.4 bus2=A_182.0 r=15 x=0
+New Reactor.A_183 phases=1 bus1=A_183.4 bus2=A_183.0 r=15 x=0
+New Reactor.A_184 phases=1 bus1=A_184.4 bus2=A_184.0 r=15 x=0
+New Reactor.A_185 phases=1 bus1=A_185.4 bus2=A_185.0 r=15 x=0
+New Reactor.A_186 phases=1 bus1=A_186.4 bus2=A_186.0 r=15 x=0
+New Reactor.A_187 phases=1 bus1=A_187.4 bus2=A_187.0 r=15 x=0
+New Reactor.A_188 phases=1 bus1=A_188.4 bus2=A_188.0 r=15 x=0
+New Reactor.A_189 phases=1 bus1=A_189.4 bus2=A_189.0 r=15 x=0
+New Reactor.A_190 phases=1 bus1=A_190.4 bus2=A_190.0 r=15 x=0
+New Reactor.A_191 phases=1 bus1=A_191.4 bus2=A_191.0 r=15 x=0
+New Reactor.A_192 phases=1 bus1=A_192.4 bus2=A_192.0 r=15 x=0
+New Reactor.A_193 phases=1 bus1=A_193.4 bus2=A_193.0 r=15 x=0
+New Reactor.A_194 phases=1 bus1=A_194.4 bus2=A_194.0 r=15 x=0
+New Reactor.A_195 phases=1 bus1=A_195.4 bus2=A_195.0 r=15 x=0
+New Reactor.A_196 phases=1 bus1=A_196.4 bus2=A_196.0 r=15 x=0
+New Reactor.A_197 phases=1 bus1=A_197.4 bus2=A_197.0 r=15 x=0
+New Reactor.A_198 phases=1 bus1=A_198.4 bus2=A_198.0 r=15 x=0
+New Reactor.A_199 phases=1 bus1=A_199.4 bus2=A_199.0 r=15 x=0
+New Reactor.A_200 phases=1 bus1=A_200.4 bus2=A_200.0 r=15 x=0
+New Reactor.A_201 phases=1 bus1=A_201.4 bus2=A_201.0 r=15 x=0
+New Reactor.A_202 phases=1 bus1=A_202.4 bus2=A_202.0 r=15 x=0
+New Reactor.A_203 phases=1 bus1=A_203.4 bus2=A_203.0 r=15 x=0
+New Reactor.A_204 phases=1 bus1=A_204.4 bus2=A_204.0 r=15 x=0
+New Reactor.A_205 phases=1 bus1=A_205.4 bus2=A_205.0 r=15 x=0
+New Reactor.A_206 phases=1 bus1=A_206.4 bus2=A_206.0 r=15 x=0
+New Reactor.A_207 phases=1 bus1=A_207.4 bus2=A_207.0 r=15 x=0
+New Reactor.A_208 phases=1 bus1=A_208.4 bus2=A_208.0 r=15 x=0
+New Reactor.A_209 phases=1 bus1=A_209.4 bus2=A_209.0 r=15 x=0
+New Reactor.A_210 phases=1 bus1=A_210.4 bus2=A_210.0 r=15 x=0
+New Reactor.A_211 phases=1 bus1=A_211.4 bus2=A_211.0 r=15 x=0
+New Reactor.A_212 phases=1 bus1=A_212.4 bus2=A_212.0 r=15 x=0
+New Reactor.A_213 phases=1 bus1=A_213.4 bus2=A_213.0 r=15 x=0
+New Reactor.A_214 phases=1 bus1=A_214.4 bus2=A_214.0 r=15 x=0
+New Reactor.A_215 phases=1 bus1=A_215.4 bus2=A_215.0 r=15 x=0
+New Reactor.A_216 phases=1 bus1=A_216.4 bus2=A_216.0 r=15 x=0
+New Reactor.A_217 phases=1 bus1=A_217.4 bus2=A_217.0 r=15 x=0
+New Reactor.A_218 phases=1 bus1=A_218.4 bus2=A_218.0 r=15 x=0
+New Reactor.A_219 phases=1 bus1=A_219.4 bus2=A_219.0 r=15 x=0
+New Reactor.A_220 phases=1 bus1=A_220.4 bus2=A_220.0 r=15 x=0
+New Reactor.A_221 phases=1 bus1=A_221.4 bus2=A_221.0 r=15 x=0
+New Reactor.A_222 phases=1 bus1=A_222.4 bus2=A_222.0 r=15 x=0
+New Reactor.A_223 phases=1 bus1=A_223.4 bus2=A_223.0 r=15 x=0
+New Reactor.A_224 phases=1 bus1=A_224.4 bus2=A_224.0 r=15 x=0
+New Reactor.A_225 phases=1 bus1=A_225.4 bus2=A_225.0 r=15 x=0
+New Reactor.A_226 phases=1 bus1=A_226.4 bus2=A_226.0 r=15 x=0
+New Reactor.A_227 phases=1 bus1=A_227.4 bus2=A_227.0 r=15 x=0
+New Reactor.A_228 phases=1 bus1=A_228.4 bus2=A_228.0 r=15 x=0
+New Reactor.A_229 phases=1 bus1=A_229.4 bus2=A_229.0 r=15 x=0
+New Reactor.A_230 phases=1 bus1=A_230.4 bus2=A_230.0 r=15 x=0
+New Reactor.A_231 phases=1 bus1=A_231.4 bus2=A_231.0 r=15 x=0
+New Reactor.A_232 phases=1 bus1=A_232.4 bus2=A_232.0 r=15 x=0
+New Reactor.A_233 phases=1 bus1=A_233.4 bus2=A_233.0 r=15 x=0
+New Reactor.A_234 phases=1 bus1=A_234.4 bus2=A_234.0 r=15 x=0
+New Reactor.A_235 phases=1 bus1=A_235.4 bus2=A_235.0 r=15 x=0
+New Reactor.A_236 phases=1 bus1=A_236.4 bus2=A_236.0 r=15 x=0
+New Reactor.A_237 phases=1 bus1=A_237.4 bus2=A_237.0 r=15 x=0
+New Reactor.A_238 phases=1 bus1=A_238.4 bus2=A_238.0 r=15 x=0
+New Reactor.A_239 phases=1 bus1=A_239.4 bus2=A_239.0 r=15 x=0
+New Reactor.A_240 phases=1 bus1=A_240.4 bus2=A_240.0 r=15 x=0
+New Reactor.A_241 phases=1 bus1=A_241.4 bus2=A_241.0 r=15 x=0
+New Reactor.A_242 phases=1 bus1=A_242.4 bus2=A_242.0 r=15 x=0
+New Reactor.A_243 phases=1 bus1=A_243.4 bus2=A_243.0 r=15 x=0
+New Reactor.A_244 phases=1 bus1=A_244.4 bus2=A_244.0 r=15 x=0
+New Reactor.A_245 phases=1 bus1=A_245.4 bus2=A_245.0 r=15 x=0
+New Reactor.A_246 phases=1 bus1=A_246.4 bus2=A_246.0 r=15 x=0
+New Reactor.A_247 phases=1 bus1=A_247.4 bus2=A_247.0 r=15 x=0
+New Reactor.A_248 phases=1 bus1=A_248.4 bus2=A_248.0 r=15 x=0
+New Reactor.A_249 phases=1 bus1=A_249.4 bus2=A_249.0 r=15 x=0
+New Reactor.A_250 phases=1 bus1=A_250.4 bus2=A_250.0 r=15 x=0
+New Reactor.A_251 phases=1 bus1=A_251.4 bus2=A_251.0 r=15 x=0
+New Reactor.A_252 phases=1 bus1=A_252.4 bus2=A_252.0 r=15 x=0
+New Reactor.A_253 phases=1 bus1=A_253.4 bus2=A_253.0 r=15 x=0
+New Reactor.A_254 phases=1 bus1=A_254.4 bus2=A_254.0 r=15 x=0
+New Reactor.A_255 phases=1 bus1=A_255.4 bus2=A_255.0 r=15 x=0
+New Reactor.A_256 phases=1 bus1=A_256.4 bus2=A_256.0 r=15 x=0
+New Reactor.A_257 phases=1 bus1=A_257.4 bus2=A_257.0 r=15 x=0
+New Reactor.A_258 phases=1 bus1=A_258.4 bus2=A_258.0 r=15 x=0
+New Reactor.A_259 phases=1 bus1=A_259.4 bus2=A_259.0 r=15 x=0
+New Reactor.A_260 phases=1 bus1=A_260.4 bus2=A_260.0 r=15 x=0
+New Reactor.A_261 phases=1 bus1=A_261.4 bus2=A_261.0 r=15 x=0
+New Reactor.A_262 phases=1 bus1=A_262.4 bus2=A_262.0 r=15 x=0
+New Reactor.A_263 phases=1 bus1=A_263.4 bus2=A_263.0 r=15 x=0
+New Reactor.A_264 phases=1 bus1=A_264.4 bus2=A_264.0 r=15 x=0
+New Reactor.A_265 phases=1 bus1=A_265.4 bus2=A_265.0 r=15 x=0
+New Reactor.A_266 phases=1 bus1=A_266.4 bus2=A_266.0 r=15 x=0
+New Reactor.A_267 phases=1 bus1=A_267.4 bus2=A_267.0 r=15 x=0
+New Reactor.A_268 phases=1 bus1=A_268.4 bus2=A_268.0 r=15 x=0
+New Reactor.A_269 phases=1 bus1=A_269.4 bus2=A_269.0 r=15 x=0
+New Reactor.A_270 phases=1 bus1=A_270.4 bus2=A_270.0 r=15 x=0
+New Reactor.A_271 phases=1 bus1=A_271.4 bus2=A_271.0 r=15 x=0
+New Reactor.A_272 phases=1 bus1=A_272.4 bus2=A_272.0 r=15 x=0
+New Reactor.A_273 phases=1 bus1=A_273.4 bus2=A_273.0 r=15 x=0
+New Reactor.A_274 phases=1 bus1=A_274.4 bus2=A_274.0 r=15 x=0
+New Reactor.A_275 phases=1 bus1=A_275.4 bus2=A_275.0 r=15 x=0
+New Reactor.A_276 phases=1 bus1=A_276.4 bus2=A_276.0 r=15 x=0
+New Reactor.A_277 phases=1 bus1=A_277.4 bus2=A_277.0 r=15 x=0
+New Reactor.A_278 phases=1 bus1=A_278.4 bus2=A_278.0 r=15 x=0
+New Reactor.A_279 phases=1 bus1=A_279.4 bus2=A_279.0 r=15 x=0
+New Reactor.A_280 phases=1 bus1=A_280.4 bus2=A_280.0 r=15 x=0
+New Reactor.A_281 phases=1 bus1=A_281.4 bus2=A_281.0 r=15 x=0
+New Reactor.A_282 phases=1 bus1=A_282.4 bus2=A_282.0 r=15 x=0
+New Reactor.A_283 phases=1 bus1=A_283.4 bus2=A_283.0 r=15 x=0
+New Reactor.A_284 phases=1 bus1=A_284.4 bus2=A_284.0 r=15 x=0
+New Reactor.A_285 phases=1 bus1=A_285.4 bus2=A_285.0 r=15 x=0
+New Reactor.A_286 phases=1 bus1=A_286.4 bus2=A_286.0 r=15 x=0
+New Reactor.A_287 phases=1 bus1=A_287.4 bus2=A_287.0 r=15 x=0
+New Reactor.A_288 phases=1 bus1=A_288.4 bus2=A_288.0 r=15 x=0
+New Reactor.A_289 phases=1 bus1=A_289.4 bus2=A_289.0 r=15 x=0
+New Reactor.A_290 phases=1 bus1=A_290.4 bus2=A_290.0 r=15 x=0
+New Reactor.A_291 phases=1 bus1=A_291.4 bus2=A_291.0 r=15 x=0
+New Reactor.A_292 phases=1 bus1=A_292.4 bus2=A_292.0 r=15 x=0
+New Reactor.A_293 phases=1 bus1=A_293.4 bus2=A_293.0 r=15 x=0
+New Reactor.A_294 phases=1 bus1=A_294.4 bus2=A_294.0 r=15 x=0
+New Reactor.A_295 phases=1 bus1=A_295.4 bus2=A_295.0 r=15 x=0
+New Reactor.A_296 phases=1 bus1=A_296.4 bus2=A_296.0 r=15 x=0
+New Reactor.A_297 phases=1 bus1=A_297.4 bus2=A_297.0 r=15 x=0
+New Reactor.A_298 phases=1 bus1=A_298.4 bus2=A_298.0 r=15 x=0
+New Reactor.A_299 phases=1 bus1=A_299.4 bus2=A_299.0 r=15 x=0
+New Reactor.B phases=1 bus1=B.4 bus2=B.0 r=15 x=0
+/*
+New Reactor.Load phases=3 bus1=B.1.2.3 bus2=B.4.4.4 
+~ rmatrix=[30.409 0 0  | 0 49.242 0 | 0 0 20.733]
+~ xmatrix=[16.413 0 0 | 0 16.185 0 | 0 0 15.550]
+*/
+
+New Isource.Ia phases=1 amps=202.8 angle=-32.0 bus1=B.1 bus2=B.4
+New Isource.Ib phases=1 amps=137.93 angle=-139.1 bus1=B.2 bus2=B.4
+New Isource.Ic phases=1 amps=255.88 angle=81.7 bus1=B.3 bus2=B.4
+
+set voltagebases=[12.47]
+calcvoltagebases
+
+
+Solve
+show losses
