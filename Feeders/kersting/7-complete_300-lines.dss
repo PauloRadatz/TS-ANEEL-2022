@@ -328,7 +328,7 @@ New Line.A_296 phases=4 bus1=A_296.1.2.3.4 bus2=A_297.1.2.3.4 Geometry=PoleExamp
 New Line.A_297 phases=4 bus1=A_297.1.2.3.4 bus2=A_298.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
 New Line.A_298 phases=4 bus1=A_298.1.2.3.4 bus2=A_299.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
 New Line.A_299 phases=4 bus1=A_299.1.2.3.4 bus2=B.1.2.3.4 Geometry=PoleExample Length=0.01 units=mi EarthModel=Carson
-New Reactor.A phases=1 bus1=A.4 bus2=A.0 r=15 x=0
+New Reactor.A phases=1 bus1=A.4 bus2=A.0 r=2 x=0
 New Reactor.A_1 phases=1 bus1=A_1.4 bus2=A_1.0 r=15 x=0
 New Reactor.A_2 phases=1 bus1=A_2.4 bus2=A_2.0 r=15 x=0
 New Reactor.A_3 phases=1 bus1=A_3.4 bus2=A_3.0 r=15 x=0
