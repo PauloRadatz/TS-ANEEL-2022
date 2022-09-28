@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
-# @Time    : 9/18/2022 5:10 PM
+# @Time    : 9/27/2022 3:28 PM
 # @Author  : Paulo Radatz
 # @Email   : pradatz@epri.com
-# @File    : EnergyAllocation.py
+# @File    : EnergyAllocation_2.py
 # @Software: PyCharm
 
-import py_dss_interface
 
+def do_energy_allocation_2(dss, energy_mwh, error_mwh=1):
 
-def do_energy_allocation(dss: py_dss_interface.DSSDLL, energy_mwh, error_mwh=1):
-
-    if not dss.meters_first():
+    if not dss.Meters.First():
         print("There is not energymeter at the feederhead")
         return False
     else:
-        if dss.meters_count() > 1:
+        if dss.Meters.Count() > 1:
             print("There are more than 1 energymeter. Please make sure there is only one")
             return False
 
@@ -23,9 +21,9 @@ def do_energy_allocation(dss: py_dss_interface.DSSDLL, energy_mwh, error_mwh=1):
     for i in range(1000):
         update_load(dss, energy_factor)
 
-        dss.text("solve")
+        dss.run_command("solve")
 
-        if dss.solution_read_converged():
+        if dss.Solution.Converged():
 
             delta_energy_mwh = calc_delta_energy(dss, energy_mwh)
 
@@ -34,7 +32,7 @@ def do_energy_allocation(dss: py_dss_interface.DSSDLL, energy_mwh, error_mwh=1):
 
             energy_factor = delta_energy_mwh / energy_mwh
 
-            dss.meters_reset()
+            dss.Meters.Reset()
 
             if abs(delta_energy_mwh) < error_mwh:
                 break
@@ -42,14 +40,14 @@ def do_energy_allocation(dss: py_dss_interface.DSSDLL, energy_mwh, error_mwh=1):
             print("Problema")
 
 def update_load(dss, energy_factor):
-    dss.loads_first()
-    for _ in range(dss.loads_count()):
-        dss.loads_write_kw(float(dss.loads_read_kw() * (1 + energy_factor)))
-        dss.loads_next()
+    dss.Loads.First()
+    for _ in range(dss.Loads.Count()):
+        dss.Loads.kW(float(dss.Loads.kW() * (1 + energy_factor)))
+        dss.Loads.Next()
 
 def calc_delta_energy(dss, energy_mwh):
-    dss.meters_first()
-    energy_mwh_power_flow = dss.meters_register_values()[0]
+    dss.Meters.First()
+    energy_mwh_power_flow = dss.Meters.RegisterValues()[0]
     delta_energy_mwh = energy_mwh - energy_mwh_power_flow
 
     return delta_energy_mwh

@@ -1,0 +1,4 @@
+Set voltagebases=[13.8 0.22]
+Calcvoltagebases
+
+New Energymeter.M element=Line.LA terminal=1
