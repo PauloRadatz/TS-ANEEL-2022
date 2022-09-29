@@ -55,11 +55,11 @@ for carga_equilibrada, caso, carregamento_pu in list(itertools.product(*[carga_e
     dss.text("set mode=daily")
     dss.text("set number=1")
     dss.text("set stepsize=1h")
-    dss.text("set tolerance=0.001")
+    # dss.text("set tolerance=0.001")
 
 
     fator = 1
-    if carga_equilibrada:
+    if not carga_equilibrada:
         fator = 1/3
 
         dss.text("Edit Load.LB enabled=False")
@@ -72,7 +72,9 @@ for carga_equilibrada, caso, carregamento_pu in list(itertools.product(*[carga_e
     if not dss.solution_read_converged():
         print("problema")
 
-    perdas_kwh_list.append(dss.circuit_losses()[0] / 1000.0)
+    perdas_total = dss.circuit_losses()[0] / 1000.0
+    perdas_line = dss.circuit_line_losses()[0]
+    perdas_kwh_list.append(perdas_total - perdas_line)
     print(i)
     # dss.text(f"save circuit dir={i}")
     i = i + 1
