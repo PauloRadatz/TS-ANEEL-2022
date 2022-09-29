@@ -11,7 +11,7 @@ import py_dss_interface
 import pandas as pd
 import time
 
-dss = py_dss_interface.DSSDLL()
+dss = py_dss_interface.DSSDLL("C:\Program Files\OpenDSS")
 
 from analytics import do_energy_allocation
 
@@ -55,5 +55,7 @@ dict_to_df["Perdas kWh"] = perdas_kwh_list
 dict_to_df["Perdas %"] = perdas_per_list
 
 df = pd.DataFrame.from_dict(dict_to_df)
+
+print(t_f)
 
 print("here")

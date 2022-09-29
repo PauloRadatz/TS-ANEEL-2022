@@ -6,7 +6,7 @@
 # @Software: PyCharm
 
 
-num = 300
+num = 1000
 
 for i in range(num):
 

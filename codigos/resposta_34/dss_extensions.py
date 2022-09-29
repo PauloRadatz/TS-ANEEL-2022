@@ -55,4 +55,6 @@ dict_to_df["Perdas %"] = perdas_per_list
 
 df = pd.DataFrame.from_dict(dict_to_df)
 
+print(t_f)
+
 print("here")
