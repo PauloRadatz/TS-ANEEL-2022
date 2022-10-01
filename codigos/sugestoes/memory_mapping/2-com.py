@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-# @Time    : 10/1/2022 11:22 AM
+# @Time    : 10/1/2022 1:45 PM
 # @Author  : Paulo Radatz
 # @Email   : pradatz@epri.com
-# @File    : 1-atualiza_cada.py
+# @File    : 2-com.py
 # @Software: PyCharm
+
 
 import pandas as pd
 import py_dss_interface
@@ -15,21 +16,17 @@ script_path = os.path.dirname(os.path.abspath(__file__))
 
 dss_file = str(pathlib.Path(script_path).joinpath("../../../feeders", "8500-Node", "Master.dss"))
 
-dss = py_dss_interface.DSSDLL()
-
-energia_kwh_dia = dict()
+dss = py_dss_interface.DSSDLL("C:\Program Files\OpenDSS")
 
 t_i = time.time()
 dss.text(f"compile [{dss_file}]")
-dss.text(f"batchedit load..* daily=default")
 dss.text("set mode=daily")
 dss.text("New Energymeter.m1 Line.ln5815900-1 1")
 dss.text("Set Maxiterations=20")
 dss.text("Set maxcontroli=100")
 
-carga_tabela = pd.read_csv(pathlib.Path(script_path).joinpath("Cargas_Atualizas.csv"))
-for index, row in carga_tabela.iterrows():
-    dss.text(f"Edit load.{row['Name']} kw={row['kw']} daily={row['daily']}")
+dss.text(f"redirect {pathlib.Path(script_path).joinpath('loadshape_com.dss')}")
+# dss.text(f"redirect {pathlib.Path(script_path).joinpath('edit_carga.dss')}")
 
 dss.text("solve")
 

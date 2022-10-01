@@ -29,13 +29,12 @@ dss.text("New Energymeter.m1 Line.ln5815900-1 1")
 dss.text("Set Maxiterations=20")
 dss.text("Set maxcontroli=100")
 
-for dia in ["DU", "SA", "DO"]:
-    carga_tabela = pd.read_csv(pathlib.Path(script_path).joinpath("Cargas_Atualizas.csv"))
-    cargas = carga_tabela.apply(escreve_linhas, axis=1)
-    cargas.to_csv(pathlib.Path(script_path).joinpath("Cargas_Atualizas.dss"), index=False, header=False)
+carga_tabela = pd.read_csv(pathlib.Path(script_path).joinpath("Cargas_Atualizas.csv"))
+cargas = carga_tabela.apply(escreve_linhas, axis=1)
+cargas.to_csv(pathlib.Path(script_path).joinpath("Cargas_Atualizas.dss"), index=False, header=False)
 
-    dss.text(f"redirect {pathlib.Path(script_path).joinpath('Cargas_Atualizas.dss')}")
-    dss.text("solve")
+dss.text(f"redirect {pathlib.Path(script_path).joinpath('Cargas_Atualizas.dss')}")
+dss.text("solve")
 
 dss.meters_first()
 energia_kwh_dia = dss.meters_register_values()[0]
