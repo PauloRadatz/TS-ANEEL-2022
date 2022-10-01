@@ -27,11 +27,12 @@ dss.text("New Energymeter.m1 Line.ln5815900-1 1")
 dss.text("Set Maxiterations=20")
 dss.text("Set maxcontroli=100")
 
-carga_tabela = pd.read_csv(pathlib.Path(script_path).joinpath("Cargas_Atualizas.csv"))
-for index, row in carga_tabela.iterrows():
-    dss.text(f"Edit load.{row['Name']} kw={row['kw']} daily={row['daily']}")
+for dia in ["DU", "SA", "DO"]:
+    carga_tabela = pd.read_csv(pathlib.Path(script_path).joinpath("Cargas_Atualizas.csv"))
+    for index, row in carga_tabela.iterrows():
+        dss.text(f"Edit load.{row['Name']} kw={row['kw']} daily={row['daily']}")
 
-dss.text("solve")
+    dss.text("solve")
 
 dss.meters_first()
 energia_kwh_dia = dss.meters_register_values()[0]
