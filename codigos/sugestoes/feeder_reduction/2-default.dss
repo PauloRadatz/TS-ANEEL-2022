@@ -1,0 +1,30 @@
+clearall
+
+cd "C:\Program Files\OpenDSS\EPRITestCircuits\ckt5"
+
+compile master_ckt5.dss
+
+solve
+Set ReduceOption = default
+Reduce
+
+batchedit load..* daily=default
+
+set mode=daily
+set number=24
+
+set totaltime=0
+solve
+get totaltime ! = 0,678 s
+
+/* Summay info para snapshot
+Devices = 4411
+Buses = 2746
+Nodes = 3084
+Max pu. voltage = 1.05 
+Min pu. voltage = 0.94293 
+Total Active Power:   7.2813 MW
+Total Reactive Power: 3.58432 Mvar
+Total Active Losses:   0.266023 MW, (3.654 %)
+Total Reactive Losses: 0.918762 Mva
+*/

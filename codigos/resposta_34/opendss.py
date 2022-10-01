@@ -35,9 +35,12 @@ dss.text("set stepsize=1h")
 dss.text("New Energymeter.m1 Line.ln5815900-1 1")
 dss.text("Set Maxiterations=20")
 
-do_energy_allocation(dss, energia_injetada_kwh, ERROR_kwh)
+# do_energy_allocation(dss, energia_injetada_kwh, ERROR_kwh)
 
+dss.text("Set TotalTime=0")
 dss.text("solve")
+total_time = dss.text("Get TotalTime")
+step_time = dss.text("Get StepTime")
 
 energia_injetada_kwh_resultado_list.append(energia_injetada_kwh)
 energia_calculada_kwh_list.append(dss.meters_register_values()[0])
@@ -56,6 +59,9 @@ dict_to_df["Perdas %"] = perdas_per_list
 
 df = pd.DataFrame.from_dict(dict_to_df)
 
-print(t_f)
+print("OpenDSS")
+print(f"Python Total time: {t_f}")
+print(f"OpenDSS Total Time: {total_time}")
+print(f"OpenDSS step Time: {step_time}")
 
 print("here")

@@ -2042,6 +2042,7 @@ New Isource.Ic phases=1 amps=255.88 angle=81.7 bus1=B.3 bus2=B.4
 set voltagebases=[12.47]
 calcvoltagebases
 
+!batchedit reactor..* r=0.00001
 
 Solve
 show losses
