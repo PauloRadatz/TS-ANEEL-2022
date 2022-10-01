@@ -12,10 +12,10 @@ import pandas as pd
 import itertools
 
 script_path = os.path.dirname(os.path.abspath(__file__))
-dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDMT", "v.dss"))
-dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDMT", "i.dss"))
-dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDMT", "ii.dss"))
-dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDMT", "iii.dss"))
+dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("dss", "SDMT", "v.dss"))
+dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("dss", "SDMT", "i.dss"))
+dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("dss", "SDMT", "ii.dss"))
+dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("dss", "SDMT", "iii.dss"))
 
 casos_list = ["v", "i", "ii", "iii"]
 casos_dss_list = [dss_file_caso_1, dss_file_caso_2, dss_file_caso_3, dss_file_caso_4]
@@ -84,7 +84,7 @@ dict_to_df["Carregamento"] = carregamento_resultado_list
 
 df = pd.DataFrame.from_dict(dict_to_df)
 
-arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_21", "SDMT", "resultados.csv"))
+arquivo_resultados = str(pathlib.Path(script_path).joinpath("dss", "SDMT", "resultados.csv"))
 
 df.to_csv(arquivo_resultados)
 

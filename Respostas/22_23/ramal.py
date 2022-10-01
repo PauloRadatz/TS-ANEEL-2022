@@ -12,11 +12,11 @@ import pandas as pd
 import itertools
 
 script_path = os.path.dirname(os.path.abspath(__file__))
-dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("../../feeders", "resposta_23", "Ramal", "caso1.dss"))
-dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("../../feeders", "resposta_23", "Ramal", "caso2.dss"))
-dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("../../feeders", "resposta_23", "Ramal", "caso3.dss"))
-dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("../../feeders", "resposta_23", "Ramal", "caso4.dss"))
-dss_file_caso_5 = str(pathlib.Path(script_path).joinpath("../../feeders", "resposta_23", "Ramal", "caso5.dss"))
+dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("dss", "Ramal", "caso1.dss"))
+dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("dss", "Ramal", "caso2.dss"))
+dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("dss", "Ramal", "caso3.dss"))
+dss_file_caso_4 = str(pathlib.Path(script_path).joinpath("dss", "Ramal", "caso4.dss"))
+dss_file_caso_5 = str(pathlib.Path(script_path).joinpath("dss", "Ramal", "caso5.dss"))
 
 casos_list = ["Caso 1", "Caso 2", "Caso 3", "Caso 4", "Caso 5"]
 casos_dss_list = [dss_file_caso_1, dss_file_caso_2, dss_file_caso_3, dss_file_caso_4]
@@ -67,7 +67,7 @@ for caso, carregamento_pu in list(itertools.product(*[casos_list, carregamento_p
     dict_to_df["Perdas kWh"] = perdas_kwh_list
     dict_to_df["Carregamento"] = carregamento_resultado_list
 
-arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../Feeders", "resposta_23", "Ramal", "resultados.csv"))
+arquivo_resultados = str(pathlib.Path(script_path).joinpath("dss", "Ramal", "resultados.csv"))
 df = pd.DataFrame.from_dict(dict_to_df)
 df.to_csv(arquivo_resultados)
 

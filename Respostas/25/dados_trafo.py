@@ -57,7 +57,7 @@ def calcula_erro(df):
 script_path = os.path.dirname(os.path.abspath(__file__))
 
 arquivo_resultados = \
- str(pathlib.Path(script_path).joinpath("../../Feeders", "Trafo_MT_BT", "resultados.csv"))
+ str(pathlib.Path(script_path).joinpath("dss", "resultados.csv"))
 
 
 completo_df = pd.read_csv(arquivo_resultados, index_col=0)

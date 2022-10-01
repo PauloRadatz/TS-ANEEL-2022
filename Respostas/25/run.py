@@ -8,16 +8,14 @@
 import os
 import pathlib
 import py_dss_interface
-import numpy as np
 import pandas as pd
 import itertools
 
-from analytics import do_energy_allocation
 
 script_path = os.path.dirname(os.path.abspath(__file__))
-dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("../../feeders", "Trafo_MT_BT", "caso1.dss"))
-dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("../../feeders", "Trafo_MT_BT", "caso2.dss"))
-dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("../../feeders", "Trafo_MT_BT", "caso3.dss"))
+dss_file_caso_1 = str(pathlib.Path(script_path).joinpath("dss", "caso1.dss"))
+dss_file_caso_2 = str(pathlib.Path(script_path).joinpath("dss", "caso2.dss"))
+dss_file_caso_3 = str(pathlib.Path(script_path).joinpath("dss", "caso3.dss"))
 
 casos_list = ["Caso 1", "Caso 2", "Caso 3"]
 casos_dss_list = [dss_file_caso_1, dss_file_caso_2, dss_file_caso_3]
@@ -55,8 +53,6 @@ for carga_equilibrada, caso, carregamento_pu in list(itertools.product(*[carga_e
     dss.text("set mode=daily")
     dss.text("set number=1")
     dss.text("set stepsize=1h")
-    # dss.text("set tolerance=0.001")
-
 
     fator = 1
     if not carga_equilibrada:
@@ -88,7 +84,7 @@ dict_to_df["Carregamento"] = carregamento_resultado_list
 
 df = pd.DataFrame.from_dict(dict_to_df)
 
-arquivo_resultados = str(pathlib.Path(script_path).joinpath("../../Feeders", "Trafo_MT_BT", "resultados.csv"))
+arquivo_resultados = str(pathlib.Path(script_path).joinpath("dss", "resultados.csv"))
 
 df.to_csv(arquivo_resultados)
 

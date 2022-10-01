@@ -1,19 +1,18 @@
 # -*- coding: utf-8 -*-
-# @Time    : 9/27/2022 12:53 PM
+# @Time    : 9/27/2022 12:54 PM
 # @Author  : Paulo Radatz
 # @Email   : pradatz@epri.com
-# @File    : opendss.py
+# @File    : dss_extensions.py
 # @Software: PyCharm
 
 import os
 import pathlib
-import py_dss_interface
 import pandas as pd
 import time
 
-dss = py_dss_interface.DSSDLL("C:\Program Files\OpenDSS")
+import opendssdirect as dss
 
-from analytics import do_energy_allocation
+from EnergyAllocation_2 import do_energy_allocation_2
 
 script_path = os.path.dirname(os.path.abspath(__file__))
 dss_file = str(pathlib.Path(script_path).joinpath("../../feeders", "8500-Node", "Master.dss"))
@@ -28,24 +27,24 @@ perdas_kwh_list = list()
 perdas_per_list = list()
 
 t_i = time.time()
-dss.text(f"compile [{dss_file}]")
-dss.text("set mode=daily")
-dss.text(f"set number={24 * 31}")
-dss.text("set stepsize=1h")
-dss.text("New Energymeter.m1 Line.ln5815900-1 1")
-dss.text("Set Maxiterations=20")
+dss.run_command(f"compile [{dss_file}]")
+dss.run_command("set mode=daily")
+dss.run_command(f"set number={24 * 31}")
+dss.run_command("set stepsize=1h")
+dss.run_command("New Energymeter.m1 Line.ln5815900-1 1")
+dss.run_command("Set Maxiterations=20")
 
-# do_energy_allocation(dss, energia_injetada_kwh, ERROR_kwh)
+do_energy_allocation_2(dss, energia_injetada_kwh, ERROR_kwh)
 
-dss.text("Set TotalTime=0")
-dss.text("solve")
-total_time = dss.text("Get TotalTime")
-step_time = dss.text("Get StepTime")
+dss.run_command("Set TotalTime=0")
+dss.run_command("solve")
+total_time = dss.run_command("Get TotalTime")
+step_time = dss.run_command("Get StepTime")
 
 energia_injetada_kwh_resultado_list.append(energia_injetada_kwh)
-energia_calculada_kwh_list.append(dss.meters_register_values()[0])
-consumo_total_carga_kwh_list.append(dss.meters_register_values()[4])
-perdas_kwh_list.append(dss.meters_register_values()[12])
+energia_calculada_kwh_list.append(dss.Meters.RegisterValues()[0])
+consumo_total_carga_kwh_list.append(dss.Meters.RegisterValues()[4])
+perdas_kwh_list.append(dss.Meters.RegisterValues()[12])
 perdas_per_list.append(perdas_kwh_list[-1] * 100.0 / energia_calculada_kwh_list[-1])
 
 t_f = time.time() - t_i
@@ -59,9 +58,7 @@ dict_to_df["Perdas %"] = perdas_per_list
 
 df = pd.DataFrame.from_dict(dict_to_df)
 
-print("OpenDSS")
+print("dss-extensions")
 print(f"Python Total time: {t_f}")
-print(f"OpenDSS Total Time: {total_time}")
-print(f"OpenDSS step Time: {step_time}")
-
-print("here")
+print(f"dss-extensions Total Time: {total_time}")
+print(f"dss-extensions step Time: {step_time}")
