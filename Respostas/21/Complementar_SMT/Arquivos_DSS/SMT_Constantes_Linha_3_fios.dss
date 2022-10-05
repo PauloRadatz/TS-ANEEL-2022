@@ -1,0 +1,19 @@
+ClearAll
+
+// Fonte ideal
+New Circuit.Thevenin bus1=SourceBus pu=1.05 basekv=13.8 model=ideal
+
+// Condutor 336,4 MCM
+New Wiredata.336_4_MCM
+~ GMR=0.00807 DIAM=1.883 RAC=0.195 normamps=590
+~ GMRunits=m RADunits=cm Runits=km
+
+// Estrutura da rede - N1
+New Linegeometry.N1 nconds=3 nphases=3 reduce=No
+~ cond=1 wire=336_4_MCM X=-1.1 h=8.4 units=m
+~ cond=2 wire=336_4_MCM X=0.4 h=8.4 units=m
+~ cond=3 wire=336_4_MCM X=1.1 h=8.4 units=m
+
+// Definição dos parâmetros para obtenção das constantes de linha
+Set earthmodel=Carson
+Show LineConstants 60 km 100.0

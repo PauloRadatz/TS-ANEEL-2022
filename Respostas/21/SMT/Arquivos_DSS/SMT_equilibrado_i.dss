@@ -1,0 +1,16 @@
+ClearAll
+
+// Fonte ideal
+New Circuit.Thevenin bus1=A pu=1.05 basekv=13.8 model=ideal
+
+// Segmento de Média Tensão (SMT) – Caso ‘i’
+New Line.L phases=3 bus1=A.1.2.3 bus2=B.1.2.3 length=0.5 units=km 
+~ r1=0.195 x1=0.384432 
+
+// Carga representada por fonte de corrente
+New Isource.ia amps=(-590 3 sqrt /) phases=1 bus1=B.1 bus2=B.2 angle=30
+New Isource.ib amps=(-590 3 sqrt /) phases=1 bus1=B.2 bus2=B.3 angle=-90
+New Isource.ic amps=(-590 3 sqrt /) phases=1 bus1=B.3 bus2=B.1 angle=150
+
+Solve
+Show Losses

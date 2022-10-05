@@ -1,0 +1,18 @@
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+// Carga MT
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+New Load.MT1_Fase_A_M1 bus1=barra2.1.2 phases=1 conn=Delta model=2 kv=13.8 kw=16.67 pf=0.92 vmaxpu=1.5 vminpu=0.93
+New Load.MT1_Fase_A_M2 bus1=barra2.1.2 phases=1 conn=Delta model=3 kv=13.8 kw=16.67 pf=0.92 vmaxpu=1.5 vminpu=0.93
+New Load.MT1_Fase_B_M1 bus1=barra2.2.3 phases=1 conn=Delta model=2 kv=13.8 kw=16.67 pf=0.92 vmaxpu=1.5 vminpu=0.93
+New Load.MT1_Fase_B_M2 bus1=barra2.2.3 phases=1 conn=Delta model=3 kv=13.8 kw=16.67 pf=0.92 vmaxpu=1.5 vminpu=0.93 
+New Load.MT1_Fase_C_M1 bus1=barra2.3.1 phases=1 conn=Delta model=2 kv=13.8 kw=16.67 pf=0.92 vmaxpu=1.5 vminpu=0.93
+New Load.MT1_Fase_C_M2 bus1=barra2.3.1 phases=1 conn=Delta model=3 kv=13.8 kw=16.67 pf=0.92 vmaxpu=1.5 vminpu=0.93 
+
+
+New Load.MT2_Fase_A_M1 bus1=barra3.1.2 phases=1 conn=Delta model=2 kv=13.8 kw=1666.67 pf=0.92 vmaxpu=1.5 vminpu=0.93
+New Load.MT2_Fase_A_M2 bus1=barra3.1.2 phases=1 conn=Delta model=3 kv=13.8 kw=1666.67 pf=0.92 vmaxpu=1.5 vminpu=0.93
+New Load.MT2_Fase_B_M1 bus1=barra3.2.3 phases=1 conn=Delta model=2 kv=13.8 kw=1666.67 pf=0.92 vmaxpu=1.5 vminpu=0.93
+New Load.MT2_Fase_B_M2 bus1=barra3.2.3 phases=1 conn=Delta model=3 kv=13.8 kw=1666.67 pf=0.92 vmaxpu=1.5 vminpu=0.93
+New Load.MT2_Fase_C_M1 bus1=barra3.3.1 phases=1 conn=Delta model=2 kv=13.8 kw=1666.67 pf=0.92 vmaxpu=1.5 vminpu=0.93
+New Load.MT2_Fase_C_M2 bus1=barra3.3.1 phases=1 conn=Delta model=3 kv=13.8 kw=1666.67 pf=0.92 vmaxpu=1.5 vminpu=0.93

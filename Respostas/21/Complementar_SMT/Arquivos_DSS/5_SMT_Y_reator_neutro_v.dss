@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------//
+// Autor: Paulo Radatz
+// e-mail: paulo.radatz@gmail.com
+// -----------------------------------------------------------------------//
+
+ClearAll
+
+New Circuit.Thevenin bus1=A pu=1.05 basekv=13.8 model=ideal
+
+// Condutor 336,4 MCM
+New Wiredata.336_4_MCM
+~ GMR=0.00807 DIAM=1.883 RAC=0.195 normamps=590
+~ GMRunits=m RADunits=cm Runits=km
+
+// Condutor 1/0 AWG
+New Wiredata.1/0AWG
+~ GMR=0.00339 DIAM=0.936 RAC=0.613 normamps=250
+~ GMRunits=m RADunits=cm Runits=km
+
+// Estrutura da rede - N1
+New Linegeometry.N1 nconds=4 nphases=3 reduce=No 
+~ cond=1 wire=336_4_MCM X=-1.1 h=8.4 units=m
+~ cond=2 wire=336_4_MCM X=0.4 h=8.4 units=m
+~ cond=3 wire=336_4_MCM X=1.1 h=8.4 units=m
+~ cond=4 wire=1/0AWG X=-0.2 h=7.25 units=m
+
+New Line.L phases=4 bus1=A.1.2.3.0 bus2=B.1.2.3.4 geometry=N1 earthmodel=Carson length=0.5 units=km 
+
+New Load.LA_M1 phases=1 conn=wye bus1=B.1.4 kv=7.967 kw=1666.67 pf=0.92 model=2
+New Load.LB_M1 phases=1 conn=wye bus1=B.2.4 kv=7.967 kw=1666.67 pf=0.92 model=2
+New Load.LC_M1 phases=1 conn=wye bus1=B.3.4 kv=7.967 kw=1666.67 pf=0.92 model=2
+New Load.LA_M2 phases=1 conn=wye bus1=B.1.4 kv=7.967 kw=1666.67 pf=0.92 model=3
+New Load.LB_M2 phases=1 conn=wye bus1=B.2.4 kv=7.967 kw=1666.67 pf=0.92 model=3
+New Load.LC_M2 phases=1 conn=wye bus1=B.3.4 kv=7.967 kw=1666.67 pf=0.92 model=3
+
+New Reactor.R phases=1 bus1=B.4 bus2=B.0 r=15 x=0
+
+Set voltagebases=[13.8 0.22]
+Calcvoltagebases
+
+New Energymeter.M element=Line.L terminal=1
+
+!Solve
+
+!dump Line.MinhaLinha Debug 

@@ -1,0 +1,8 @@
+!--- OpenDSS Linecodes file generated from Show LINECONSTANTS command
+!--- Frequency = 60 Hz, Earth resistivity = 100 ohm-m
+!--- Earth Model = Carson
+
+New Linecode.n1 nphases=3  Units=km
+~ Rmatrix=[0.254218  |0.0592176  0.254218  |0.0592176  0.0592176  0.254218  ]
+~ Xmatrix=[0.871979  |0.478018  0.871979  |0.449141  0.535482  0.871979  ]
+~ Cmatrix=[8.51001  |-2.15361  9.60983  |-1.40599  -3.49313  9.29712  ]

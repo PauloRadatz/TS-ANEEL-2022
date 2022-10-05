@@ -1,0 +1,19 @@
+PARA EXECUTAR CADA UM DOS CASOS, FAÇA OS SEGUINTES PASSOS:
+
+1) Executar o arquivo "SMT_complementar_equilibrado.py" OU "SMT_complementar_desequilibrado.py".
+
+2) Na linha 13 do código, altere o nome do arquivo desejado.
+
+Por exemplo, para executar o arquivo "1_SMT_delta_3_fios_i.dss"
+
+dss_file_caso = str(pathlib.Path(script_path).joinpath(r"Arquivos_DSS\1_SMT_delta_3_fios_i.dss"))
+
+3) Altere a variável 'energy_mwh' (linha 73 p/ caso equilibrado e linha 83 p/ caso desequilibrado) de acordo com o caso selecionado. 
+
+Para os casos trifásicos: 'energy_mwh = 15000'
+
+Para os casos monofásicos: 'energy_mwh = 5000'
+
+4) Os valores de energia injetada (kWh), perdas (kWh) e perdas percentuais (%) são obtidas no final do código.
+
+

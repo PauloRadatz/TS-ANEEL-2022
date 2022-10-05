@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------//
+// Autor: Paulo Radatz
+// e-mail: paulo.radatz@gmail.com
+// -----------------------------------------------------------------------//
+
+ClearAll
+
+New Circuit.Thevenin bus1=A pu=1.05 basekv=13.8 model=ideal
+
+New Line.L phases=4 bus1=A.1.2.3.0 bus2=B.1.2.3.4 length=0.5 units=km 
+~ r1=0.195  x1=0.384346
+!~ r1=0.195062  x1=0.384346
+
+New Load.LA_M1 phases=1 conn=wye bus1=B.1.4 kv=7.967 kw=1666.67 pf=0.92 model=2
+New Load.LB_M1 phases=1 conn=wye bus1=B.2.4 kv=7.967 kw=1666.67 pf=0.92 model=2
+New Load.LC_M1 phases=1 conn=wye bus1=B.3.4 kv=7.967 kw=1666.67 pf=0.92 model=2
+New Load.LA_M2 phases=1 conn=wye bus1=B.1.4 kv=7.967 kw=1666.67 pf=0.92 model=3
+New Load.LB_M2 phases=1 conn=wye bus1=B.2.4 kv=7.967 kw=1666.67 pf=0.92 model=3
+New Load.LC_M2 phases=1 conn=wye bus1=B.3.4 kv=7.967 kw=1666.67 pf=0.92 model=3
+
+Set voltagebases=[13.8 0.22]
+Calcvoltagebases
+
+New Energymeter.M element=Line.L terminal=1
+
+!Solve
+
+!dump Line.MinhaLinha Debug 

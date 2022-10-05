@@ -1,0 +1,26 @@
+ClearAll
+
+// Fonte ideal
+New Circuit.Thevenin bus1=A pu=1.05 basekv=13.8 model=ideal
+
+// Condutor 336,4 MCM
+New Wiredata.336_4_MCM
+~ GMR=0.00807 DIAM=1.883 RAC=0.195 normamps=590
+~ GMRunits=m RADunits=cm Runits=km
+
+// Estrutura da rede - N1
+New Linegeometry.N1 nconds=3 nphases=3 reduce=No 
+~ cond=1 wire=336_4_MCM X=-1.1 h=8.4 units=m
+~ cond=2 wire=336_4_MCM X=0.4 h=8.4 units=m
+~ cond=3 wire=336_4_MCM X=1.1 h=8.4 units=m
+
+// Segmento de Média Tensão (SMT) – Caso ‘v’
+New Line.L phases=3 bus1=A.1.2.3 bus2=B.1.2.3 geometry=N1 earthmodel=Carson length=0.5 units=km
+
+// Carga representada por fonte de corrente
+New Isource.ia amps=(-590 3 sqrt /) phases=1 bus1=B.1 bus2=B.2 angle=30
+New Isource.ib amps=(-590 3 sqrt /) phases=1 bus1=B.2 bus2=B.3 angle=-90
+New Isource.ic amps=(-590 3 sqrt /) phases=1 bus1=B.3 bus2=B.1 angle=150
+
+Solve
+Show Losses
