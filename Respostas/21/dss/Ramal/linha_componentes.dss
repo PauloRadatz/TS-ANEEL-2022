@@ -1,7 +1,0 @@
-ClearAll
-
-redirect modelo/fonte_ideal.dss
-redirect modelo/arranjo.dss
-
-Set earthmodel=Carson
-Show LineConstants 60 km 100.0

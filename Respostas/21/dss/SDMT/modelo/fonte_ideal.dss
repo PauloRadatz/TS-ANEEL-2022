@@ -1,3 +1,0 @@
-ClearAll
-
-New Circuit.Thevenin bus1=A pu=1.05 basekv=13.8 model=ideal

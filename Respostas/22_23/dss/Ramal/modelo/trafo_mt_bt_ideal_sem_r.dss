@@ -1,3 +1,0 @@
-New Transformer.TrafoTri phases=3 windings=2 xhl=0.00000001 %loadloss=0.00000001 %noloadloss=0.00000001
-~ wdg=1 bus=SourceBus kV=13.8 kva=1 conn=delta
-~ wdg=2 bus=A.1.2.3 kV=0.22 kva=1 conn=wye
