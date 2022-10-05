@@ -1,0 +1,32 @@
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+// Trechos MT - SMT
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// Definição do trecho MT - 1_2
+New Line.SMT_Trecho1_1 phases=4 bus1=barra1B.1.2.3.4 bus2=barra1_1.1.2.3.4 geometry=N1 length=0.2 units=km earthmodel=Carson
+New Line.SMT_Trecho1_2 phases=4 bus1=barra1_1.1.2.3.4 bus2=barra1_2.1.2.3.4 geometry=N1 length=0.2 units=km earthmodel=Carson
+New Line.SMT_Trecho1_3 phases=4 bus1=barra1_2.1.2.3.4 bus2=barra1_3.1.2.3.4 geometry=N1 length=0.2 units=km earthmodel=Carson
+New Line.SMT_Trecho1_4 phases=4 bus1=barra1_3.1.2.3.4 bus2=barra1_4.1.2.3.4 geometry=N1 length=0.2 units=km earthmodel=Carson
+New Line.SMT_Trecho1_5 phases=4 bus1=barra1_4.1.2.3.4 bus2=barra2.1.2.3.4 geometry=N1 length=0.2 units=km earthmodel=Carson
+New Reactor.SMT_Trecho1_1 phases=1 bus1=barra1_1.4 bus2=barra1_1.0 R=15 x=0 basefreq=60
+New Reactor.SMT_Trecho1_2 phases=1 bus1=barra1_2.4 bus2=barra1_2.0 R=15 x=0 basefreq=60
+New Reactor.SMT_Trecho1_3 phases=1 bus1=barra1_3.4 bus2=barra1_3.0 R=15 x=0 basefreq=60
+New Reactor.SMT_Trecho1_4 phases=1 bus1=barra1_4.4 bus2=barra1_4.0 R=15 x=0 basefreq=60
+New Reactor.SMT_Trecho1_5 phases=1 bus1=barra2.4 bus2=barra2.0 R=15 x=0 basefreq=60
+
+!New Line.Neutro1 phases=1 bus1=barra2.4 bus2=C1_A.4 r1=0.00001 r0=0.00001 x1=0 x0=0 c1=0 c0=0 length=0.001 switch=T
+
+
+
+// Definição do trecho MT - 2_3
+
+New Line.SMT_Trecho2_1 phases=4 bus1=barra2.1.2.3.4 bus2=barra2_1.1.2.3.4 geometry=N1 length=0.2 units=km earthmodel=Carson
+New Line.SMT_Trecho2_2 phases=4 bus1=barra2_1.1.2.3.4 bus2=barra2_2.1.2.3.4 geometry=N1 length=0.2 units=km earthmodel=Carson
+New Line.SMT_Trecho2_3 phases=4 bus1=barra2_2.1.2.3.4 bus2=barra2_3.1.2.3.4 geometry=N1 length=0.2 units=km earthmodel=Carson
+New Line.SMT_Trecho2_4 phases=4 bus1=barra2_3.1.2.3.4 bus2=barra2_4.1.2.3.4 geometry=N1 length=0.2 units=km earthmodel=Carson
+New Line.SMT_Trecho2_5 phases=4 bus1=barra2_4.1.2.3.4 bus2=barra3.1.2.3.4 geometry=N1 length=0.2 units=km earthmodel=Carson
+New Reactor.SMT_Trecho2_1 phases=1 bus1=barra2_1.4 bus2=barra2_1.0 R=15 x=0 basefreq=60
+New Reactor.SMT_Trecho2_2 phases=1 bus1=barra2_2.4 bus2=barra2_2.0 R=15 x=0 basefreq=60
+New Reactor.SMT_Trecho2_3 phases=1 bus1=barra2_3.4 bus2=barra2_3.0 R=15 x=0 basefreq=60
+New Reactor.SMT_Trecho2_4 phases=1 bus1=barra2_4.4 bus2=barra2_4.0 R=15 x=0 basefreq=60
+New Reactor.SMT_Trecho2_5 phases=1 bus1=barra3.4 bus2=barra3.0 R=15 x=0 basefreq=60

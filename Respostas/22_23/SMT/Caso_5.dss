@@ -1,0 +1,38 @@
+ClearAll
+
+New Circuit.Fonte phases=3 basekv=12.47 bus1=A.1.2.3 bus2=A.4.4.4 model=ideal
+
+! 556,550 26/7
+New Wiredata.Phase GMR=0.0303 DIAM=0.927 RAC=0.1859
+~ NormAmps=730
+~ Runits=mi radunits=in gmrunits=ft
+
+! 4/0 ACSR
+New Wiredata.Neutral GMR=0.00814 DIAM=0.563 RAC=0.592
+~ NormAmps=340
+~ Runits=mi radunits=in gmrunits=ft
+
+New Linegeometry.PoleExample nconds=4 nphases=3 reduce=yes
+~ cond=1 Wire=Phase x= -4 h=29 units=ft
+~ cond=2 Wire=Phase x= 3 h=29 units=ft
+~ cond=3 Wire=Phase x= -1.5 h=29 units=ft
+~ cond=4 Wire=Neutral x= 0 h=25 units=ft
+
+New Line.LineExample phases=3 bus1=A.1.2.3 bus2=B.1.2.3
+~ Geometry=PoleExample
+~ Length=3 units=mi
+~ EarthModel=Carson
+
+New Reactor.A phases=1 bus1=A.4 bus2=A.0 r=15 x=0
+New Reactor.B phases=1 bus1=B.4 bus2=B.0 r=15 x=0
+
+New Isource.Ia phases=1 amps=202.8 angle=-32.0 bus1=B.1 bus2=B.4
+New Isource.Ib phases=1 amps=137.93 angle=-139.1 bus1=B.2 bus2=B.4
+New Isource.Ic phases=1 amps=255.88 angle=81.7 bus1=B.3 bus2=B.4
+
+set voltagebases=[12.47]
+calcvoltagebases
+
+Solve
+Dump Line.LineExample debug
+Show Losses

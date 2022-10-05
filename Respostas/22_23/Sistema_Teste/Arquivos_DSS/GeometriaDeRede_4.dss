@@ -1,0 +1,46 @@
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+// Geometria / estruturas de rede
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// Definição da estrutura da rede - N1
+New Linegeometry.N1 nconds=4 nphases=3 reduce=Yes
+~ cond=1 wire=336_4_MCM X=-1.1 h=8.4 units=m
+~ cond=2 wire=336_4_MCM X=0.4 h=8.4 units=m
+~ cond=3 wire=336_4_MCM X=1.1 h=8.4 units=m
+~ cond=4 wire=1/0AWG X=-0.2 h=7.25 units=m
+
+// Definição da estrutura da rede - S1 - 4 AWG
+New Linegeometry.S1_4AWG nconds=4 nphases=3 reduce=No 
+~ cond=1 wire=4AWG X=0.2 h=7.0 units=m
+~ cond=2 wire=4AWG X=0.2 h=6.8 units=m
+~ cond=3 wire=4AWG X=0.2 h=6.6 units=m
+~ cond=4 wire=4AWG X=0.2 h=7.2 units=m
+
+// Definição da estrutura da rede - S1 - 2 AWG
+New Linegeometry.S1_2AWG nconds=4 nphases=3 reduce=Yes
+~ cond=1 wire=2AWG X=0.2 h=7.0 units=m
+~ cond=2 wire=2AWG X=0.2 h=6.8 units=m
+~ cond=3 wire=2AWG X=0.2 h=6.6 units=m
+~ cond=4 wire=4AWG X=0.2 h=7.2 units=m
+
+// Definição da estrutura da rede - S1 - 1/0 AWG
+New Linegeometry.S1_1/0AWG nconds=4 nphases=3 reduce=No 
+~ cond=1 wire=1/0AWG X=0.2 h=7.0 units=m
+~ cond=2 wire=1/0AWG X=0.2 h=6.8 units=m
+~ cond=3 wire=1/0AWG X=0.2 h=6.6 units=m
+~ cond=4 wire=2AWG X=0.2 h=7.2 units=m
+
+// Definição do cabo multiplexado / isolado - SI1 - 35mm²
+New Linegeometry.SI1_35mm2 nconds=4 nphases=3 reduce=Yes
+~ cond=1 wire=35mm2 X=-0.012 h=7.1 units=m
+~ cond=2 wire=35mm2 X=0.0 h=7.09 units=m
+~ cond=3 wire=35mm2 X=0.012 h=7.1 units=m
+~ cond=4 wire=35mm2 X=0.0 h=7.1 units=m
+
+/*
+// Não utilizado no caso base. Será utilizado apenas se precisar de separar em cargas monofásicas.
+// Definição do cabo multiplexado / isolado - SI1 - 35mm²
+New Linegeometry.SI1_35mm2_2 nconds=2 nphases=1 reduce=No 
+~ cond=1 wire=35mm2 X=-0.012 h=7.1 units=m
+~ cond=2 wire=35mm2 X=0.0 h=7.1 units=m
+*/

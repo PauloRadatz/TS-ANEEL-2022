@@ -1,0 +1,33 @@
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+// Dados dos condutores
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// Definição do condutor 336,4 MCM
+New Wiredata.336_4_MCM
+~ GMR=0.00807 DIAM=1.883 RAC=0.195 normamps=590
+~ GMRunits=m RADunits=cm Runits=km
+
+// Definição do condutor 4/0 AWG
+New Wiredata.4/0AWG
+~ GMR=0.00481 DIAM=1.326 RAC=0.306 normamps=380
+~ GMRunits=m RADunits=cm Runits=km
+
+// Definição do condutor 1/0 AWG
+New Wiredata.1/0AWG
+~ GMR=0.00339 DIAM=0.936 RAC=0.613 normamps=250
+~ GMRunits=m RADunits=cm Runits=km
+
+// Definição do condutor 2 AWG
+New Wiredata.2AWG
+~ GMR=0.00269 DIAM=0.741 RAC=0.975 normamps=190
+~ GMRunits=m RADunits=cm Runits=km
+
+// Definição do condutor 4 AWG
+New Wiredata.4AWG
+~ GMR=0.00213 DIAM=0.588 RAC=1.551 normamps=140
+~ GMRunits=m RADunits=cm Runits=km
+
+// Definição do condutor Multiplexado 35mm²
+New Wiredata.35mm2
+~ GMR=0.0027 DIAM=0.7 RAC=0.991 normamps=120
+~ GMRunits=m RADunits=cm Runits=km

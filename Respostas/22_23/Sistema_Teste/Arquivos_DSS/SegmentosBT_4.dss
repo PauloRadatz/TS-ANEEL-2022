@@ -1,0 +1,25 @@
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+// Trechos BT - SBT
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// Trechos BT Circuito 1
+New Line.C1_SBT_AB phases=3 bus1=C1_A.1.2.3 bus2=C1_B.1.2.3 length=0.05 geometry=S1_2AWG units=km earthmodel=Carson
+New Line.C1_SBT_BC phases=3 bus1=C1_B.1.2.3 bus2=C1_C.1.2.3 length=0.05 geometry=S1_2AWG units=km earthmodel=Carson
+New Line.C1_SBT_CD phases=3 bus1=C1_C.1.2.3 bus2=C1_D.1.2.3 length=0.05 geometry=S1_2AWG units=km earthmodel=Carson
+New Line.C1_SBT_CE phases=3 bus1=C1_C.1.2.3 bus2=C1_E.1.2.3 length=0.05 geometry=S1_2AWG units=km earthmodel=Carson
+New Line.C1_SBT_AF phases=3 bus1=C1_A.1.2.3 bus2=C1_F.1.2.3 length=0.05 geometry=S1_2AWG units=km earthmodel=Carson
+New Line.C1_SBT_FG phases=3 bus1=C1_F.1.2.3 bus2=C1_G.1.2.3 length=0.05 geometry=S1_2AWG units=km earthmodel=Carson
+New Line.C1_SBT_AH phases=3 bus1=C1_A.1.2.3 bus2=C1_H.1.2.3 length=0.05 geometry=S1_2AWG units=km earthmodel=Carson
+New Line.C1_SBT_HI phases=3 bus1=C1_H.1.2.3 bus2=C1_I.1.2.3 length=0.05 geometry=S1_2AWG units=km earthmodel=Carson
+
+/*
+// Trechos BT Circuito 1
+New Line.C1_SBT_AB bus1=C1_A.1.2.3.4 bus2=C1_B.1.2.3.4 length=0.05 geometry=S1_2AWG units=km earthmodel=Carson
+New Line.C1_SBT_BC bus1=C1_B.1.2.3.4 bus2=C1_C.1.2.3.4 length=0.05 geometry=S1_4AWG units=km earthmodel=Carson
+New Line.C1_SBT_CD bus1=C1_C.1.2.3.4 bus2=C1_D.1.2.3.4 length=0.05 geometry=S1_4AWG units=km earthmodel=Carson
+New Line.C1_SBT_CE bus1=C1_C.1.2.3.4 bus2=C1_E.1.2.3.4 length=0.05 geometry=S1_4AWG units=km earthmodel=Carson
+New Line.C1_SBT_AF bus1=C1_A.1.2.3.4 bus2=C1_F.1.2.3.4 length=0.05 geometry=S1_4AWG units=km earthmodel=Carson
+New Line.C1_SBT_FG bus1=C1_F.1.2.3.4 bus2=C1_G.1.2.3.4 length=0.05 geometry=S1_4AWG units=km earthmodel=Carson
+New Line.C1_SBT_AH bus1=C1_A.1.2.3.4 bus2=C1_H.1.2.3.4 length=0.05 geometry=S1_2AWG units=km earthmodel=Carson
+New Line.C1_SBT_HI bus1=C1_H.1.2.3.4 bus2=C1_I.1.2.3.4 length=0.05 geometry=S1_4AWG units=km earthmodel=Carson
+*/

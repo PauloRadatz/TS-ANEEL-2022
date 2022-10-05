@@ -1,0 +1,166 @@
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+// Cargas BT
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+// Cargas Circuito BT 1
+New Load.C1_CargaB_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_B.1.0 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaB_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_B.1.0 model=3 kva=1.67 pf=0.92
+New Load.C1_CargaB_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_B.2.0 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaB_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_B.2.0 model=3 kva=1.67 pf=0.92
+New Load.C1_CargaB_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_B.3.0 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaB_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_B.3.0 model=3 kva=1.67 pf=0.92
+
+New Load.C1_CargaC_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_C.1.0 model=2 kva=1.33 pf=0.92
+New Load.C1_CargaC_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_C.1.0 model=3 kva=1.33 pf=0.92
+New Load.C1_CargaC_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_C.2.0 model=2 kva=1.33 pf=0.92
+New Load.C1_CargaC_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_C.2.0 model=3 kva=1.33 pf=0.92
+New Load.C1_CargaC_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_C.3.0 model=2 kva=1.33 pf=0.92
+New Load.C1_CargaC_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_C.3.0 model=3 kva=1.33 pf=0.92
+
+New Load.C1_CargaD_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_D.1.0 model=2 kva=1.5 pf=0.92
+New Load.C1_CargaD_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_D.1.0 model=3 kva=1.5 pf=0.92
+New Load.C1_CargaD_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_D.2.0 model=2 kva=1.5 pf=0.92
+New Load.C1_CargaD_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_D.2.0 model=3 kva=1.5 pf=0.92
+New Load.C1_CargaD_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_D.3.0 model=2 kva=1.5 pf=0.92
+New Load.C1_CargaD_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_D.3.0 model=3 kva=1.5 pf=0.92
+
+New Load.C1_CargaE_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_E.1.0 model=2 kva=1 pf=0.92
+New Load.C1_CargaE_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_E.1.0 model=3 kva=1 pf=0.92
+New Load.C1_CargaE_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_E.2.0 model=2 kva=1 pf=0.92
+New Load.C1_CargaE_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_E.2.0 model=3 kva=1 pf=0.92
+New Load.C1_CargaE_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_E.3.0 model=2 kva=1 pf=0.92
+New Load.C1_CargaE_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_E.3.0 model=3 kva=1 pf=0.92
+
+New Load.C1_CargaF_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_F.1.0 model=2 kva=0.83 pf=0.92
+New Load.C1_CargaF_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_F.1.0 model=3 kva=0.83 pf=0.92
+New Load.C1_CargaF_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_F.2.0 model=2 kva=0.83 pf=0.92
+New Load.C1_CargaF_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_F.2.0 model=3 kva=0.83 pf=0.92
+New Load.C1_CargaF_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_F.3.0 model=2 kva=0.83 pf=0.92
+New Load.C1_CargaF_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_F.3.0 model=3 kva=0.83 pf=0.92
+
+New Load.C1_CargaG_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_G.1.0 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaG_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_G.1.0 model=3 kva=1.67 pf=0.92
+New Load.C1_CargaG_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_G.2.0 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaG_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_G.2.0 model=3 kva=1.67 pf=0.92
+New Load.C1_CargaG_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_G.3.0 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaG_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_G.3.0 model=3 kva=1.67 pf=0.92
+
+New Load.C1_CargaH_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_H.1.0 model=2 kva=2.5 pf=0.92
+New Load.C1_CargaH_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_H.1.0 model=3 kva=2.5 pf=0.92
+New Load.C1_CargaH_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_H.2.0 model=2 kva=2.5 pf=0.92
+New Load.C1_CargaH_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_H.2.0 model=3 kva=2.5 pf=0.92
+New Load.C1_CargaH_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_H.3.0 model=2 kva=2.5 pf=0.92
+New Load.C1_CargaH_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_H.3.0 model=3 kva=2.5 pf=0.92
+
+New Load.C1_CargaI_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_I.1.0 model=2 kva=2 pf=0.92
+New Load.C1_CargaI_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_I.1.0 model=3 kva=2 pf=0.92
+New Load.C1_CargaI_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_I.2.0 model=2 kva=2 pf=0.92
+New Load.C1_CargaI_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_I.2.0 model=3 kva=2 pf=0.92
+New Load.C1_CargaI_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_I.3.0 model=2 kva=2 pf=0.92
+New Load.C1_CargaI_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_I.3.0 model=3 kva=2 pf=0.92
+
+/*
+// Aterramento das Cargas Circuito BT 1
+New Reactor.C1_CargaB phases=1 bus1=C1_RBT_B.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaC phases=1 bus1=C1_RBT_C.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaD phases=1 bus1=C1_RBT_D.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaE phases=1 bus1=C1_RBT_E.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaF phases=1 bus1=C1_RBT_F.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaG phases=1 bus1=C1_RBT_G.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaH phases=1 bus1=C1_RBT_H.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaI phases=1 bus1=C1_RBT_I.4 R=15 x=0 basefreq=60
+*/
+
+/*
+// Não utilizado no caso base. Será utilizado apenas se precisar de separar em cargas monofásicas.
+// Cargas Circuito BT 1
+New Load.C1_CargaB_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_B_A.1.4 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaB_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_B_A.1.4 model=3 kva=1.67 pf=0.92
+New Load.C1_CargaB_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_B_B.2.4 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaB_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_B_B.2.4 model=3 kva=1.67 pf=0.92
+New Load.C1_CargaB_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_B_C.3.4 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaB_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_B_C.3.4 model=3 kva=1.67 pf=0.92
+
+New Load.C1_CargaC_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_C_A.1.4 model=2 kva=1.33 pf=0.92
+New Load.C1_CargaC_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_C_A.1.4 model=3 kva=1.33 pf=0.92
+New Load.C1_CargaC_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_C_B.2.4 model=2 kva=1.33 pf=0.92
+New Load.C1_CargaC_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_C_B.2.4 model=3 kva=1.33 pf=0.92
+New Load.C1_CargaC_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_C_C.3.4 model=2 kva=1.33 pf=0.92
+New Load.C1_CargaC_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_C_C.3.4 model=3 kva=1.33 pf=0.92
+
+New Load.C1_CargaD_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_D_A.1.4 model=2 kva=1.5 pf=0.92
+New Load.C1_CargaD_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_D_A.1.4 model=3 kva=1.5 pf=0.92
+New Load.C1_CargaD_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_D_B.2.4 model=2 kva=1.5 pf=0.92
+New Load.C1_CargaD_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_D_B.2.4 model=3 kva=1.5 pf=0.92
+New Load.C1_CargaD_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_D_C.3.4 model=2 kva=1.5 pf=0.92
+New Load.C1_CargaD_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_D_C.3.4 model=3 kva=1.5 pf=0.92
+
+New Load.C1_CargaE_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_E_A.1.4 model=2 kva=1 pf=0.92
+New Load.C1_CargaE_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_E_A.1.4 model=3 kva=1 pf=0.92
+New Load.C1_CargaE_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_E_B.2.4 model=2 kva=1 pf=0.92
+New Load.C1_CargaE_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_E_B.2.4 model=3 kva=1 pf=0.92
+New Load.C1_CargaE_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_E_C.3.4 model=2 kva=1 pf=0.92
+New Load.C1_CargaE_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_E_C.3.4 model=3 kva=1 pf=0.92
+
+New Load.C1_CargaF_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_F_A.1.4 model=2 kva=0.83 pf=0.92
+New Load.C1_CargaF_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_F_A.1.4 model=3 kva=0.83 pf=0.92
+New Load.C1_CargaF_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_F_B.2.4 model=2 kva=0.83 pf=0.92
+New Load.C1_CargaF_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_F_B.2.4 model=3 kva=0.83 pf=0.92
+New Load.C1_CargaF_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_F_C.3.4 model=2 kva=0.83 pf=0.92
+New Load.C1_CargaF_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_F_C.3.4 model=3 kva=0.83 pf=0.92
+
+New Load.C1_CargaG_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_G_A.1.4 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaG_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_G_A.1.4 model=3 kva=1.67 pf=0.92
+New Load.C1_CargaG_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_G_B.2.4 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaG_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_G_B.2.4 model=3 kva=1.67 pf=0.92
+New Load.C1_CargaG_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_G_C.3.4 model=2 kva=1.67 pf=0.92
+New Load.C1_CargaG_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_G_C.3.4 model=3 kva=1.67 pf=0.92
+
+New Load.C1_CargaH_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_H_A.1.4 model=2 kva=2.5 pf=0.92
+New Load.C1_CargaH_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_H_A.1.4 model=3 kva=2.5 pf=0.92
+New Load.C1_CargaH_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_H_B.2.4 model=2 kva=2.5 pf=0.92
+New Load.C1_CargaH_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_H_B.2.4 model=3 kva=2.5 pf=0.92
+New Load.C1_CargaH_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_H_C.3.4 model=2 kva=2.5 pf=0.92
+New Load.C1_CargaH_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_H_C.3.4 model=3 kva=2.5 pf=0.92
+
+New Load.C1_CargaI_Fase_A_M1 phases=1 kv=0.127 bus1=C1_RBT_I_A.1.4 model=2 kva=2 pf=0.92
+New Load.C1_CargaI_Fase_A_M2 phases=1 kv=0.127 bus1=C1_RBT_I_A.1.4 model=3 kva=2 pf=0.92
+New Load.C1_CargaI_Fase_B_M1 phases=1 kv=0.127 bus1=C1_RBT_I_B.2.4 model=2 kva=2 pf=0.92
+New Load.C1_CargaI_Fase_B_M2 phases=1 kv=0.127 bus1=C1_RBT_I_B.2.4 model=3 kva=2 pf=0.92
+New Load.C1_CargaI_Fase_C_M1 phases=1 kv=0.127 bus1=C1_RBT_I_C.3.4 model=2 kva=2 pf=0.92
+New Load.C1_CargaI_Fase_C_M2 phases=1 kv=0.127 bus1=C1_RBT_I_C.3.4 model=3 kva=2 pf=0.92
+
+// Aterramento das Cargas Circuito BT 1
+New Reactor.C1_CargaB_A phases=1 bus1=C1_RBT_B_A.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaB_B phases=1 bus1=C1_RBT_B_B.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaB_C phases=1 bus1=C1_RBT_B_C.4 R=15 x=0 basefreq=60
+
+New Reactor.C1_CargaC_A phases=1 bus1=C1_RBT_C_A.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaC_B phases=1 bus1=C1_RBT_C_B.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaC_C phases=1 bus1=C1_RBT_C_C.4 R=15 x=0 basefreq=60
+
+New Reactor.C1_CargaD_A phases=1 bus1=C1_RBT_D_A.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaD_B phases=1 bus1=C1_RBT_D_B.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaD_C phases=1 bus1=C1_RBT_D_C.4 R=15 x=0 basefreq=60
+
+New Reactor.C1_CargaE_A phases=1 bus1=C1_RBT_E_A.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaE_B phases=1 bus1=C1_RBT_E_B.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaE_C phases=1 bus1=C1_RBT_E_C.4 R=15 x=0 basefreq=60
+
+New Reactor.C1_CargaF_A phases=1 bus1=C1_RBT_F_A.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaF_B phases=1 bus1=C1_RBT_F_B.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaF_C phases=1 bus1=C1_RBT_F_C.4 R=15 x=0 basefreq=60
+
+New Reactor.C1_CargaG_A phases=1 bus1=C1_RBT_G_A.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaG_B phases=1 bus1=C1_RBT_G_B.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaG_C phases=1 bus1=C1_RBT_G_C.4 R=15 x=0 basefreq=60
+
+New Reactor.C1_CargaH_A phases=1 bus1=C1_RBT_H_A.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaH_B phases=1 bus1=C1_RBT_H_B.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaH_C phases=1 bus1=C1_RBT_H_C.4 R=15 x=0 basefreq=60
+
+New Reactor.C1_CargaI_A phases=1 bus1=C1_RBT_I_A.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaI_B phases=1 bus1=C1_RBT_I_B.4 R=15 x=0 basefreq=60
+New Reactor.C1_CargaI_C phases=1 bus1=C1_RBT_I_C.4 R=15 x=0 basefreq=60
+*/

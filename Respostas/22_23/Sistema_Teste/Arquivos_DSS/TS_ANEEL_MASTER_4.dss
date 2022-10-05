@@ -1,0 +1,35 @@
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+// Sistema Teste - TS ANEEL (LADEE / EPRI)
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// Limpar memória do OpenDSS
+Clear
+
+Redirect Alimentador_1_4.dss
+
+Redirect Condutores.dss
+
+Redirect GeometriaDeRede_4.dss
+
+Redirect ChavesSeccionadoras_4.dss
+
+Redirect SegmentosMT_4.dss
+
+Redirect Transformador_4.dss
+
+Redirect SegmentosBT_4.dss
+
+Redirect Medidores.dss
+
+Redirect RamaisBT_4.dss
+
+Redirect CargasBT_4.dss
+
+Redirect CargasMT_4.dss
+
+Set voltagebases=[13.8 0.22]
+Calcvoltagebases
+
+
+
+

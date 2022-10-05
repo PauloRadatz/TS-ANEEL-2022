@@ -1,0 +1,51 @@
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+// Ramal BT - RBT
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+// Ramais BT Circuito 1
+New Line.C1_RBT_B phases=4 bus1=C1_B.1.2.3.4 bus2=C1_RBT_B.1.2.3.4 length=0.015 geometry=SI1_35mm2 units=km earthmodel=Carson      
+New Line.C1_RBT_C phases=4 bus1=C1_C.1.2.3.4 bus2=C1_RBT_C.1.2.3.4 length=0.015 geometry=SI1_35mm2 units=km earthmodel=Carson        
+New Line.C1_RBT_D phases=4 bus1=C1_D.1.2.3.4 bus2=C1_RBT_D.1.2.3.4 length=0.015 geometry=SI1_35mm2 units=km earthmodel=Carson          
+New Line.C1_RBT_E phases=4 bus1=C1_E.1.2.3.4 bus2=C1_RBT_E.1.2.3.4 length=0.015 geometry=SI1_35mm2 units=km earthmodel=Carson        
+New Line.C1_RBT_F phases=4 bus1=C1_F.1.2.3.4 bus2=C1_RBT_F.1.2.3.4 length=0.015 geometry=SI1_35mm2 units=km earthmodel=Carson          
+New Line.C1_RBT_G phases=4 bus1=C1_G.1.2.3.4 bus2=C1_RBT_G.1.2.3.4 length=0.015 geometry=SI1_35mm2 units=km earthmodel=Carson        
+New Line.C1_RBT_H phases=4 bus1=C1_H.1.2.3.4 bus2=C1_RBT_H.1.2.3.4 length=0.015 geometry=SI1_35mm2 units=km earthmodel=Carson          
+New Line.C1_RBT_I phases=4 bus1=C1_I.1.2.3.4 bus2=C1_RBT_I.1.2.3.4 length=0.015 geometry=SI1_35mm2 units=km earthmodel=Carson  
+
+/*
+// Não utilizado no caso base. Será utilizado apenas se precisar de separar em cargas monofásicas.
+// Ramais BT Circuito 1
+New Line.C1_RBT_B_A bus1=C1_B.1.4 bus2=C1_RBT_B_A.1.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson      
+New Line.C1_RBT_B_B bus1=C1_B.2.4 bus2=C1_RBT_B_B.2.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson      
+New Line.C1_RBT_B_C bus1=C1_B.3.4 bus2=C1_RBT_B_C.3.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+
+New Line.C1_RBT_C_A bus1=C1_C.1.4 bus2=C1_RBT_C_A.1.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson  
+New Line.C1_RBT_C_B bus1=C1_C.2.4 bus2=C1_RBT_C_B.2.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson  
+New Line.C1_RBT_C_C bus1=C1_C.3.4 bus2=C1_RBT_C_C.3.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson  
+
+New Line.C1_RBT_D_A bus1=C1_D.1.4 bus2=C1_RBT_D_A.1.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+New Line.C1_RBT_D_B bus1=C1_D.2.4 bus2=C1_RBT_D_B.2.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+New Line.C1_RBT_D_C bus1=C1_D.3.4 bus2=C1_RBT_D_C.3.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+
+New Line.C1_RBT_E_A bus1=C1_E.1.4 bus2=C1_RBT_E_A.1.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson  
+New Line.C1_RBT_E_B bus1=C1_E.2.4 bus2=C1_RBT_E_B.2.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson  
+New Line.C1_RBT_E_C bus1=C1_E.3.4 bus2=C1_RBT_E_C.3.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson  
+
+New Line.C1_RBT_F_A bus1=C1_F.1.4 bus2=C1_RBT_F_A.1.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+New Line.C1_RBT_F_B bus1=C1_F.2.4 bus2=C1_RBT_F_B.2.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+New Line.C1_RBT_F_C bus1=C1_F.3.4 bus2=C1_RBT_F_C.3.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+
+New Line.C1_RBT_G_A bus1=C1_G.1.4 bus2=C1_RBT_G_A.1.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+New Line.C1_RBT_G_B bus1=C1_G.2.4 bus2=C1_RBT_G_B.2.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+New Line.C1_RBT_G_C bus1=C1_G.3.4 bus2=C1_RBT_G_C.3.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+
+New Line.C1_RBT_H_A bus1=C1_H.1.4 bus2=C1_RBT_H_A.1.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+New Line.C1_RBT_H_B bus1=C1_H.2.4 bus2=C1_RBT_H_B.2.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+New Line.C1_RBT_H_C bus1=C1_H.3.4 bus2=C1_RBT_H_C.3.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson 
+
+New Line.C1_RBT_I_A bus1=C1_I.1.4 bus2=C1_RBT_I_A.1.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson  
+New Line.C1_RBT_I_B bus1=C1_I.2.4 bus2=C1_RBT_I_B.2.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson  
+New Line.C1_RBT_I_C bus1=C1_I.3.4 bus2=C1_RBT_I_C.3.4 length=0.015 geometry=SI1_35mm2_2 units=km earthmodel=Carson  
+*/
+  

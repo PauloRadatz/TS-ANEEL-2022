@@ -1,0 +1,13 @@
+PARA EXECUTAR CADA UM DOS CASOS, FAÇA OS SEGUINTES PASSOS:
+
+1) Executar o arquivo "Sistema_teste_desequilibrado.py".
+
+2) Na linha 13 do código, altere o nome do arquivo desejado.
+
+Por exemplo, para executar o arquivo "TS_ANEEL_MASTER_1.dss":
+
+dss_file_caso = str(pathlib.Path(script_path).joinpath(r"Arquivos_DSS\TS_ANEEL_MASTER_1.dss"))
+
+3) Os valores de energia injetada (kWh), perdas (kWh) e perdas percentuais (%) são obtidas no final do código.
+
+

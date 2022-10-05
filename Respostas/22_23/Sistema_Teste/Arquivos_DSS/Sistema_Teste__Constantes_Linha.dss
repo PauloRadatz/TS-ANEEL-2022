@@ -1,0 +1,25 @@
+ClearAll
+
+// Fonte ideal
+New Circuit.Thevenin bus1=SourceBus pu=1.05 basekv=13.8 model=ideal
+
+// Condutor 4 AWG
+New Wiredata.4AWG
+~ GMR=0.00213 DIAM=0.588 RAC=1.551 normamps=140
+~ GMRunits=m RADunits=cm Runits=km
+
+// Condutor 2 AWG
+New Wiredata.2AWG
+~ GMR=0.00269 DIAM=0.741 RAC=0.975 normamps=190
+~ GMRunits=m RADunits=cm Runits=km
+
+// Estrutura da rede - S1 - 2 AWG
+New Linegeometry.S1_2AWG nconds=4 nphases=3 reduce=Yes
+~ cond=1 wire=2AWG X=0.2 h=7.0 units=m
+~ cond=2 wire=2AWG X=0.2 h=6.8 units=m
+~ cond=3 wire=2AWG X=0.2 h=6.6 units=m
+~ cond=4 wire=2AWG X=0.2 h=7.2 units=m
+
+// Definição dos parâmetros para obtenção das constantes de linha
+Set earthmodel=Carson
+Show LineConstants 60 km 100.0
