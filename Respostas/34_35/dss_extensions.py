@@ -33,8 +33,9 @@ dss.run_command(f"set number={24 * 31}")
 dss.run_command("set stepsize=1h")
 dss.run_command("New Energymeter.m1 Line.ln5815900-1 1")
 dss.run_command("Set Maxiterations=20")
+dss.run_command("Set controlmode=off")
 
-do_energy_allocation_2(dss, energia_injetada_kwh, ERROR_kwh)
+# do_energy_allocation_2(dss, energia_injetada_kwh, ERROR_kwh)
 
 dss.run_command("Set TotalTime=0")
 dss.run_command("solve")
